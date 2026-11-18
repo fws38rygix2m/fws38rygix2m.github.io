@@ -1,0 +1,2160 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>葫芦娃 | 官方品牌门户 | 匠心国漫内容社区</title>
+<meta name="description" content="葫芦娃官方网站：深耕国风原创动画与影像内容的高品质视频品牌平台，聚合创作者、企业动态与精品内容生态，陪伴每一代观众成长。">
+<style>
+:root{
+  --green:#1f6f43;
+  --green-deep:#123f27;
+  --green-soft:#e6f1e9;
+  --earth:#8a5a2b;
+  --earth-soft:#f4ebdf;
+  --ink:#20241f;
+  --muted:#5d6b60;
+  --bg:#f7f9f5;
+  --card:#ffffff;
+  --line:#dfe7dd;
+  --amber:#d98a1c;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(18,63,39,.10);
+  --header-h:104px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+section{scroll-margin-top:calc(var(--header-h) + 12px);}
+.wrap{width:min(1180px,92%);margin:0 auto;}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
+/* ---------- Sticky stack: notice + header ---------- */
+.sticky-stack{
+  position:sticky;top:0;z-index:120;
+}
+.notice-bar{
+  background:linear-gradient(90deg,#123f27,#1f6f43 45%,#2a8654);
+  color:#eaf5ec;
+  font-size:13.5px;
+  letter-spacing:.2px;
+}
+.notice-bar .wrap{
+  display:flex;align-items:center;gap:12px;
+  min-height:38px;padding-left:0;
+  overflow:hidden;
+}
+.notice-tag{
+  flex:0 0 auto;
+  background:var(--amber);color:#231a08;
+  font-weight:700;font-size:12px;
+  padding:2px 9px;border-radius:999px;
+}
+.notice-track{
+  display:flex;gap:34px;white-space:nowrap;
+  overflow:hidden;
+  mask-image:linear-gradient(90deg,transparent,#000 3%,#000 92%,transparent);
+}
+.notice-track span{opacity:.94;}
+.notice-track b{color:#ffd98a;font-weight:600;}
+
+.site-header{
+  background:rgba(247,249,245,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 4px 18px rgba(18,63,39,.05);
+}
+.header-inner{
+  display:flex;align-items:center;gap:22px;
+  min-height:66px;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  font-weight:800;font-size:20px;letter-spacing:1px;
+  color:var(--green-deep);
+  flex:0 0 auto;
+}
+.logo-mark{
+  width:36px;height:36px;border-radius:10px;
+  background:radial-gradient(circle at 30% 25%,#5ec888,#1f6f43 72%);
+  color:#fff;display:grid;place-items:center;
+  font-size:15px;font-weight:800;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.28);
+}
+.logo small{
+  display:block;font-size:10.5px;font-weight:500;letter-spacing:2.4px;
+  color:var(--muted);line-height:1.1;
+}
+.main-nav{
+  display:flex;gap:4px;flex:1 1 auto;
+}
+.main-nav a{
+  padding:8px 13px;border-radius:9px;
+  font-size:14.5px;color:#33413a;font-weight:500;
+  transition:.2s;
+}
+.main-nav a:hover,.main-nav a:focus-visible{
+  background:var(--green-soft);color:var(--green-deep);
+}
+.header-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+.search-box{
+  display:flex;align-items:center;gap:7px;
+  background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:6px 6px 6px 14px;
+  transition:.2s;
+}
+.search-box:focus-within{border-color:#63a87f;box-shadow:0 0 0 4px rgba(31,111,67,.12);}
+.search-box input{
+  border:none;outline:none;background:transparent;
+  font-size:13.5px;width:132px;color:var(--ink);
+}
+.search-box button{
+  background:var(--green);color:#fff;
+  border-radius:999px;font-size:13px;
+  padding:5px 13px;font-weight:600;
+  transition:.2s;
+}
+.search-box button:hover{background:var(--green-deep);}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;
+  border-radius:999px;font-weight:600;font-size:14px;
+  padding:9px 20px;transition:.22s;border:1px solid transparent;
+}
+.btn-primary{background:var(--green);color:#fff;box-shadow:0 6px 16px rgba(31,111,67,.24);}
+.btn-primary:hover{background:var(--green-deep);transform:translateY(-1px);}
+.btn-ghost{background:#fff;color:var(--green-deep);border-color:#bcd4c4;}
+.btn-ghost:hover{background:var(--green-soft);}
+.menu-toggle{
+  display:none;width:42px;height:42px;border-radius:11px;
+  background:#fff;border:1px solid var(--line);
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;
+}
+.menu-toggle span{display:block;width:19px;height:2px;background:var(--green-deep);border-radius:2px;transition:.2s;}
+.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.menu-toggle.open span:nth-child(2){opacity:0;}
+.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+.search-feedback{
+  font-size:12.5px;color:var(--green-deep);
+  background:var(--green-soft);border:1px dashed #a9cbb8;
+  border-radius:10px;padding:7px 12px;
+  margin:10px auto 0;display:none;
+}
+.search-feedback.show{display:block;}
+.mobile-panel{display:none;border-top:1px solid var(--line);background:#fff;}
+.mobile-panel.open{display:block;}
+.mobile-panel ul{padding:10px 0;}
+.mobile-panel a{display:block;padding:11px 4%;font-size:15px;color:#2d3a33;border-radius:8px;}
+.mobile-panel a:hover{background:var(--green-soft);}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 420px at 88% -10%,rgba(217,138,28,.18),transparent 62%),
+    radial-gradient(760px 400px at 4% 8%,rgba(31,111,67,.20),transparent 60%),
+    linear-gradient(160deg,#f4f8f2,#eef4ee 55%,#f9f5ec);
+  border-bottom:1px solid var(--line);
+}
+.hero .wrap{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:52px;
+  align-items:center;padding:58px 0 62px;
+}
+.hero-copy .kicker{
+  display:inline-flex;align-items:center;gap:9px;
+  background:#fff;border:1px solid #cfe0d5;
+  color:var(--green-deep);font-size:12.5px;font-weight:600;
+  padding:5px 14px;border-radius:999px;letter-spacing:.6px;
+  box-shadow:var(--shadow);
+}
+.kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);}
+h1{
+  font-size:clamp(30px,4.2vw,50px);
+  line-height:1.2;font-weight:800;letter-spacing:.5px;
+  color:var(--green-deep);margin:18px 0 6px;
+}
+h1 .h1-sub{
+  display:block;font-size:clamp(14px,1.5vw,17px);
+  font-weight:600;color:var(--earth);
+  letter-spacing:3px;margin-top:10px;
+}
+.hero-intro{
+  font-size:15px;color:#3c4b42;margin:16px 0 0;max-width:36em;
+  text-align:justify;
+}
+.hero-intro strong{color:var(--green-deep);}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px;
+}
+.stat{
+  background:rgba(255,255,255,.78);
+  border:1px solid #d6e5da;border-radius:14px;
+  padding:14px 16px;backdrop-filter:blur(4px);
+}
+.stat b{display:block;font-size:24px;color:var(--green-deep);font-weight:800;line-height:1.2;}
+.stat span{font-size:12.5px;color:var(--muted);letter-spacing:.4px;}
+.hero-visual{position:relative;}
+.hero-frame{
+  border-radius:24px;overflow:hidden;
+  box-shadow:0 26px 60px rgba(18,63,39,.22);
+  border:1px solid rgba(255,255,255,.7);
+  background:#dfeade;
+}
+.hero-frame svg{width:100%;height:auto;display:block;}
+.hero-badge{
+  position:absolute;left:-16px;bottom:26px;
+  background:#fff;border-radius:14px;
+  padding:12px 18px;box-shadow:var(--shadow);
+  border:1px solid var(--line);
+  font-size:12.5px;color:var(--muted);
+  line-height:1.5;
+}
+.hero-badge b{display:block;color:var(--green-deep);font-size:15px;}
+.hero-float{
+  position:absolute;right:-10px;top:18px;
+  background:var(--amber);color:#251c07;
+  font-size:12px;font-weight:700;letter-spacing:.5px;
+  padding:7px 15px;border-radius:999px;
+  box-shadow:0 8px 20px rgba(217,138,28,.32);
+}
+
+/* ---------- Section shell ---------- */
+.section{padding:72px 0;}
+.section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:24px;margin-bottom:34px;flex-wrap:wrap;
+}
+.sec-head .sec-no{
+  font-size:12px;font-weight:700;letter-spacing:2.2px;
+  color:var(--earth);text-transform:uppercase;
+}
+h2{
+  font-size:clamp(22px,2.6vw,30px);font-weight:800;
+  color:var(--green-deep);letter-spacing:.4px;line-height:1.3;
+  margin-top:6px;
+}
+.sec-desc{font-size:14px;color:var(--muted);max-width:44em;margin-top:8px;}
+
+/* ---------- Focus module ---------- */
+.focus-grid{
+  display:grid;grid-template-columns:1.5fr 1fr;gap:26px;
+}
+.focus-main{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:#123f27;}
+.focus-main svg{width:100%;height:auto;display:block;}
+.focus-main .focus-info{
+  position:absolute;inset:auto 0 0 0;
+  padding:24px 26px 22px;
+  background:linear-gradient(0deg,rgba(9,32,20,.94),rgba(9,32,20,.62) 58%,transparent);
+  color:#fff;
+}
+.focus-info .tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+.tag{
+  display:inline-block;font-size:11.5px;font-weight:600;
+  padding:3px 10px;border-radius:999px;
+  background:rgba(255,255,255,.18);color:#eaf5ec;
+  border:1px solid rgba(255,255,255,.26);
+}
+.tag.solid{background:var(--amber);color:#251c07;border-color:transparent;}
+.focus-info h3{font-size:21px;line-height:1.4;font-weight:700;}
+.focus-info p{font-size:13.5px;color:#cfe2d5;margin-top:7px;}
+.focus-side{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.mini-card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:16px;overflow:hidden;
+  transition:.25s;display:flex;flex-direction:column;
+}
+.mini-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#bcd4c4;}
+.mini-card .thumb{position:relative;aspect-ratio:16/9;overflow:hidden;}
+.mini-card .thumb svg{width:100%;height:100%;}
+.mini-card .thumb .play{
+  position:absolute;inset:0;display:grid;place-items:center;
+}
+.play-icon{
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.82);
+  display:grid;place-items:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.2);
+  transition:.25s;
+}
+.play-icon::after{
+  content:"";border-style:solid;
+  border-width:7px 0 7px 12px;
+  border-color:transparent transparent transparent var(--green-deep);
+  margin-left:3px;
+}
+.mini-card:hover .play-icon{background:var(--amber);transform:scale(1.08);}
+.mini-card:hover .play-icon::after{border-left-color:#251c07;}
+.mini-body{padding:13px 15px 15px;display:flex;flex-direction:column;gap:6px;flex:1;}
+.mini-body h4{font-size:14.5px;line-height:1.45;font-weight:700;color:#26332b;}
+.mini-body .meta{font-size:12px;color:var(--muted);margin-top:auto;display:flex;gap:12px;flex-wrap:wrap;}
+
+/* ---------- Video stream ---------- */
+.stream-toolbar{
+  display:flex;gap:9px;flex-wrap:wrap;margin-bottom:26px;
+}
+.chip{
+  font-size:13px;padding:7px 16px;border-radius:999px;
+  background:#fff;border:1px solid var(--line);color:#3f4d44;
+  transition:.2s;font-weight:500;
+}
+.chip:hover{border-color:#a9cbb8;color:var(--green-deep);}
+.chip.active{background:var(--green);color:#fff;border-color:var(--green);box-shadow:0 6px 16px rgba(31,111,67,.22);}
+.video-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.video-card{
+  background:var(--card);border-radius:18px;overflow:hidden;
+  border:1px solid var(--line);display:flex;flex-direction:column;
+  transition:.25s;
+}
+.video-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#bcd4c4;}
+.video-card .cover{position:relative;aspect-ratio:16/9;overflow:hidden;}
+.video-card .cover svg{width:100%;height:100%;transition:transform .5s;}
+.video-card:hover .cover svg{transform:scale(1.05);}
+.cover .overlay-tag{
+  position:absolute;left:12px;top:12px;
+  background:rgba(18,63,39,.86);color:#eaf5ec;
+  font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px;
+  letter-spacing:.4px;
+}
+.cover .dur{
+  position:absolute;right:10px;bottom:10px;
+  background:rgba(0,0,0,.62);color:#fff;
+  font-size:11px;padding:2px 8px;border-radius:6px;
+}
+.cover .play-fab{
+  position:absolute;inset:0;display:grid;place-items:center;
+  opacity:0;transition:.25s;background:rgba(9,32,20,.18);
+}
+.video-card:hover .play-fab{opacity:1;}
+.vc-body{padding:16px 17px 17px;display:flex;flex-direction:column;gap:9px;flex:1;}
+.vc-body h3{font-size:15.5px;line-height:1.45;font-weight:700;color:#22302a;}
+.vc-body .summary{font-size:13px;color:var(--muted);line-height:1.65;}
+.vc-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.vc-tags span{
+  font-size:11px;padding:2px 9px;border-radius:6px;
+  background:var(--green-soft);color:var(--green-deep);font-weight:600;
+}
+.vc-foot{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;margin-top:auto;padding-top:11px;border-top:1px dashed var(--line);
+}
+.author-mini{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#44524a;font-weight:600;}
+.avatar{
+  width:28px;height:28px;border-radius:50%;
+  display:grid;place-items:center;
+  font-size:12px;font-weight:800;color:#fff;
+  flex:0 0 auto;
+}
+.av-1{background:linear-gradient(135deg,#2a8654,#123f27);}
+.av-2{background:linear-gradient(135deg,#d98a1c,#a8650b);}
+.av-3{background:linear-gradient(135deg,#3a7fa8,#1d4f6b);}
+.av-4{background:linear-gradient(135deg,#8a5a2b,#5c3a17);}
+.av-5{background:linear-gradient(135deg,#8363a8,#4f3a6b);}
+.av-6{background:linear-gradient(135deg,#a84f4f,#6b2626);}
+.vc-actions{display:flex;gap:6px;}
+.icon-btn{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:12px;color:var(--muted);
+  padding:4px 9px;border-radius:8px;transition:.2s;
+  border:1px solid transparent;
+}
+.icon-btn:hover{background:var(--green-soft);color:var(--green-deep);}
+.icon-btn.liked{color:#c2410c;background:#fdeee2;border-color:#f6d5bd;}
+.icon-btn.saved{color:var(--green-deep);background:var(--green-soft);border-color:#bcd4c4;}
+
+/* ---------- Special topics ---------- */
+.topic-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.topic-card{
+  position:relative;border-radius:18px;overflow:hidden;
+  border:1px solid var(--line);background:#fff;
+  transition:.25s;
+}
+.topic-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+.topic-card .t-cover{position:relative;aspect-ratio:4/3;}
+.topic-card .t-cover svg{width:100%;height:100%;}
+.topic-card .t-cover::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(18,63,39,.72),transparent 65%);
+}
+.t-status{
+  position:absolute;left:12px;top:12px;z-index:2;
+  font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;
+  background:rgba(255,255,255,.9);color:var(--green-deep);
+}
+.t-status.live{background:var(--amber);color:#251c07;}
+.topic-card .t-body{padding:15px 16px 18px;position:relative;z-index:2;margin-top:-38px;}
+.t-body h3{font-size:15px;color:#fff;font-weight:700;line-height:1.4;}
+.t-body p{font-size:12.5px;color:#d5e6da;margin-top:5px;}
+.t-meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-top:11px;}
+
+/* ---------- Creators ---------- */
+.creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.creator-card{
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:22px;display:flex;flex-direction:column;gap:13px;
+  transition:.25s;
+}
+.creator-card:hover{border-color:#a9cbb8;box-shadow:var(--shadow);transform:translateY(-3px);}
+.cc-top{display:flex;align-items:center;gap:14px;}
+.cc-avatar{
+  width:56px;height:56px;border-radius:16px;flex:0 0 auto;
+  display:grid;place-items:center;font-size:21px;font-weight:800;color:#fff;
+}
+.cc-name{font-size:16px;font-weight:800;color:#22302a;}
+.cc-field{font-size:12.5px;color:var(--earth);font-weight:600;margin-top:2px;}
+.cc-bio{font-size:13px;color:var(--muted);line-height:1.7;}
+.cc-nums{display:flex;gap:22px;padding-top:13px;border-top:1px dashed var(--line);}
+.cc-nums b{font-size:17px;color:var(--green-deep);font-weight:800;display:block;line-height:1.2;}
+.cc-nums span{font-size:11.5px;color:var(--muted);}
+.cc-actions{display:flex;gap:8px;}
+.cc-actions .btn{font-size:12.5px;padding:6px 15px;}
+
+/* ---------- Story / reviews ---------- */
+.split{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:start;}
+.story-list{display:flex;flex-direction:column;gap:18px;}
+.story-item{
+  background:#fff;border:1px solid var(--line);border-left:4px solid var(--amber);
+  border-radius:12px;padding:18px 20px;
+}
+.story-item h3{font-size:15px;color:#22302a;font-weight:700;margin-bottom:7px;}
+.story-item p{font-size:13.5px;color:#49574e;line-height:1.78;text-align:justify;}
+.story-item .sig{font-size:12px;color:var(--earth);margin-top:9px;font-weight:600;}
+
+.review-list{display:flex;flex-direction:column;gap:14px;}
+.review{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:16px 18px;position:relative;
+}
+.review .r-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.review .r-name{font-size:13.5px;font-weight:700;color:#26332b;}
+.review .r-time{font-size:11.5px;color:#94a29a;margin-left:auto;}
+.review p{font-size:13.5px;color:#49574e;line-height:1.72;}
+.review .stars{color:var(--amber);font-size:12px;letter-spacing:1px;margin-top:6px;}
+
+/* ---------- Wall ---------- */
+.wall{
+  display:grid;grid-template-columns:repeat(6,1fr);
+  grid-auto-rows:118px;gap:14px;
+}
+.wall figure{
+  position:relative;border-radius:14px;overflow:hidden;
+  border:1px solid var(--line);margin:0;
+  transition:.25s;
+}
+.wall figure:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+.wall figure svg{width:100%;height:100%;}
+.wall figcaption{
+  position:absolute;inset:auto 0 0 0;
+  padding:16px 12px 10px;
+  background:linear-gradient(0deg,rgba(9,32,20,.82),transparent);
+  color:#fff;font-size:11.5px;font-weight:600;line-height:1.4;
+}
+.w-lg{grid-column:span 3;grid-row:span 2;}
+.w-md{grid-column:span 2;grid-row:span 1;}
+.w-sm{grid-column:span 2;grid-row:span 1;}
+.w-tall{grid-column:span 2;grid-row:span 2;}
+
+/* ---------- Inspiration / updates ---------- */
+.two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:start;}
+.inspire-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.inspire{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:16px 17px;transition:.22s;
+}
+.inspire:hover{border-color:#a9cbb8;background:var(--green-soft);}
+.inspire .i-no{font-size:11px;font-weight:800;color:var(--earth);letter-spacing:1.6px;}
+.inspire h3{font-size:14.5px;font-weight:700;color:#22302a;margin:5px 0 6px;line-height:1.4;}
+.inspire p{font-size:12.5px;color:var(--muted);line-height:1.65;}
+
+.timeline{position:relative;padding-left:24px;}
+.timeline::before{
+  content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(180deg,#a9cbb8,#e3ecE1);
+}
+.tl-item{position:relative;padding-bottom:22px;}
+.tl-item::before{
+  content:"";position:absolute;left:-24px;top:6px;
+  width:11px;height:11px;border-radius:50%;
+  background:#fff;border:2.5px solid var(--green);
+}
+.tl-item .tl-date{font-size:11.5px;color:var(--earth);font-weight:700;letter-spacing:.6px;}
+.tl-item h3{font-size:14.5px;font-weight:700;color:#22302a;margin:3px 0 4px;}
+.tl-item p{font-size:13px;color:var(--muted);line-height:1.7;}
+
+/* ---------- Partners ---------- */
+.partner-row{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:16px;
+}
+.partner{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:18px 12px;text-align:center;transition:.22s;
+}
+.partner:hover{border-color:#a9cbb8;transform:translateY(-3px);box-shadow:var(--shadow);}
+.partner .p-mark{
+  width:42px;height:42px;border-radius:12px;margin:0 auto 9px;
+  display:grid;place-items:center;font-weight:800;color:#fff;font-size:15px;
+}
+.partner b{display:block;font-size:13px;color:#26332b;}
+.partner span{font-size:11.5px;color:var(--muted);}
+
+/* ---------- FAQ ---------- */
+.faq-list{display:flex;flex-direction:column;gap:12px;max-width:900px;margin:0 auto;}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:13px;
+  padding:0 20px;transition:.2s;
+}
+details[open]{border-color:#a9cbb8;box-shadow:var(--shadow);}
+summary{
+  list-style:none;cursor:pointer;
+  padding:16px 0;font-size:14.5px;font-weight:700;color:#26332b;
+  display:flex;align-items:center;gap:12px;
+}
+summary::-webkit-details-marker{display:none;}
+summary::before{
+  content:"+";flex:0 0 auto;
+  width:22px;height:22px;border-radius:7px;
+  background:var(--green-soft);color:var(--green-deep);
+  display:grid;place-items:center;font-weight:800;font-size:15px;
+  transition:.2s;
+}
+details[open] summary::before{content:"−";background:var(--green);color:#fff;}
+details p{font-size:13.5px;color:#4b5950;line-height:1.8;padding:0 0 17px 34px;margin-top:-4px;}
+
+/* ---------- Contact / submit ---------- */
+.contact-band{
+  background:linear-gradient(135deg,#123f27,#1f6f43 55%,#2a8654);
+  color:#eaf5ec;border-radius:22px;
+  padding:46px 44px;display:grid;grid-template-columns:1.2fr .8fr;
+  gap:36px;align-items:center;box-shadow:0 22px 50px rgba(18,63,39,.28);
+  position:relative;overflow:hidden;
+}
+.contact-band::after{
+  content:"";position:absolute;right:-70px;top:-70px;
+  width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle,rgba(217,138,28,.34),transparent 68%);
+}
+.contact-band h2{color:#fff;font-size:clamp(21px,2.4vw,27px);}
+.contact-band p{font-size:14px;color:#cfe2d5;margin-top:12px;max-width:36em;line-height:1.8;}
+.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;}
+.contact-actions .btn-primary{background:var(--amber);color:#251c07;box-shadow:0 8px 22px rgba(217,138,28,.34);}
+.contact-actions .btn-primary:hover{background:#ef9d28;}
+.contact-actions .btn-ghost{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.4);}
+.contact-actions .btn-ghost:hover{background:rgba(255,255,255,.2);}
+.contact-info{position:relative;z-index:2;font-size:13.5px;line-height:2.1;color:#d6e8db;}
+.contact-info b{color:#ffd98a;font-weight:600;display:inline-block;min-width:74px;}
+
+/* ---------- Footer ---------- */
+.site-footer{
+  background:#0e2f1e;color:#a9c1b1;padding:54px 0 26px;margin-top:0;
+}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1);}
+.footer-brand .logo{color:#eaf5ec;}
+.footer-brand .logo small{color:#8fae9b;}
+.footer-brand p{font-size:13px;line-height:1.85;margin-top:14px;color:#9ab4a4;max-width:26em;}
+.footer-col h4{font-size:14px;color:#eaf5ec;margin-bottom:13px;font-weight:700;letter-spacing:.5px;}
+.footer-col a{display:block;font-size:13px;color:#9ab4a4;padding:4px 0;transition:.2s;}
+.footer-col a:hover{color:#ffd98a;}
+.footer-bottom{
+  padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12.5px;color:#7f9b8b;
+}
+.footer-bottom a{color:#9ab4a4;}
+.footer-bottom a:hover{color:#ffd98a;}
+
+/* ---------- Toast / modal / back-top ---------- */
+.toast{
+  position:fixed;left:50%;bottom:32px;transform:translate(-50%,20px);
+  background:#123f27;color:#eaf5ec;font-size:13.5px;
+  padding:11px 22px;border-radius:999px;
+  box-shadow:0 14px 34px rgba(0,0,0,.28);
+  opacity:0;pointer-events:none;transition:.28s;z-index:400;
+}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+.modal-mask{
+  position:fixed;inset:0;background:rgba(9,32,20,.55);
+  backdrop-filter:blur(3px);z-index:500;
+  display:none;place-items:center;padding:22px;
+}
+.modal-mask.show{display:grid;}
+.modal{
+  background:#fff;border-radius:18px;width:min(480px,100%);
+  padding:28px 26px 24px;box-shadow:0 30px 70px rgba(0,0,0,.32);
+  animation:pop .22s ease;
+}
+@keyframes pop{from{transform:translateY(12px) scale(.98);opacity:0}to{transform:none;opacity:1}}
+.modal h3{font-size:18px;color:var(--green-deep);font-weight:800;margin-bottom:6px;}
+.modal .m-desc{font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.7;}
+.modal label{display:block;font-size:12.5px;font-weight:700;color:#3f4d44;margin-bottom:5px;}
+.modal input,.modal textarea,.modal select{
+  width:100%;border:1px solid var(--line);border-radius:10px;
+  padding:9px 12px;font-size:13.5px;font-family:inherit;color:var(--ink);
+  outline:none;margin-bottom:13px;background:#fbfdfb;
+  transition:.2s;
+}
+.modal input:focus,.modal textarea:focus,.modal select:focus{border-color:#63a87f;box-shadow:0 0 0 3px rgba(31,111,67,.12);}
+.modal textarea{resize:vertical;min-height:80px;}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:4px;}
+.modal-close{
+  position:absolute;right:16px;top:14px;
+  width:32px;height:32px;border-radius:9px;background:#f0f4f0;
+  display:grid;place-items:center;color:#5d6b60;font-size:17px;
+}
+.modal-wrap{position:relative;}
+.back-top{
+  position:fixed;right:24px;bottom:92px;z-index:300;
+  width:46px;height:46px;border-radius:14px;
+  background:var(--green);color:#fff;
+  display:grid;place-items:center;
+  box-shadow:0 10px 26px rgba(31,111,67,.36);
+  opacity:0;pointer-events:none;transform:translateY(10px);
+  transition:.26s;font-size:18px;
+}
+.back-top.show{opacity:1;pointer-events:auto;transform:none;}
+.back-top:hover{background:var(--green-deep);}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1000px){
+  .hero .wrap{grid-template-columns:1fr;gap:38px;}
+  .focus-grid{grid-template-columns:1fr;}
+  .video-grid{grid-template-columns:repeat(2,1fr);}
+  .topic-row{grid-template-columns:repeat(2,1fr);}
+  .creator-grid{grid-template-columns:repeat(2,1fr);}
+  .split,.two-col{grid-template-columns:1fr;gap:32px;}
+  .partner-row{grid-template-columns:repeat(3,1fr);}
+  .contact-band{grid-template-columns:1fr;padding:38px 30px;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .wall{grid-auto-rows:104px;}
+  .w-lg,.w-tall{grid-column:span 6;grid-row:span 2;}
+  .w-md,.w-sm{grid-column:span 3;}
+}
+@media (max-width:760px){
+  :root{--header-h:98px;}
+  .main-nav,.search-box{display:none;}
+  .header-tools .btn{display:none;}
+  .menu-toggle{display:flex;margin-left:auto;}
+  .video-grid{grid-template-columns:1fr;}
+  .topic-row{grid-template-columns:1fr;}
+  .creator-grid{grid-template-columns:1fr;}
+  .partner-row{grid-template-columns:repeat(2,1fr);}
+  .inspire-list{grid-template-columns:1fr;}
+  .hero-stats{grid-template-columns:1fr;gap:10px;}
+  .stat{display:flex;align-items:baseline;gap:10px;}
+  .stat b{font-size:21px;}
+  .footer-top{grid-template-columns:1fr;}
+  .section{padding:52px 0;}
+  .wall{grid-auto-rows:96px;gap:10px;}
+  .w-md,.w-sm{grid-column:span 6;grid-row:span 1;}
+  .hero-badge{left:8px;bottom:12px;padding:9px 13px;}
+  .focus-side{grid-template-columns:1fr;}
+  .contact-band{padding:30px 22px;border-radius:16px;}
+  .back-top{right:16px;bottom:78px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-stack">
+  <div class="notice-bar" role="region" aria-label="站内更新公告">
+    <div class="wrap">
+      <span class="notice-tag">更新</span>
+      <div class="notice-track">
+        <span>《葫芦里到底有什么》第二季 <b>新增 6 集</b> · 每周五 20:00 更新</span>
+        <span>「国漫匠心」专题企划 <b>开启报名</b> · 面向全体创作者征集短片</span>
+        <span>创作者扶持计划第三期 <b>新增 32 位作者入驻</b></span>
+        <span>新版投稿指南已发布 · 支持 <b>1080P 高清</b> 成片上传</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="header-inner">
+        <a href="#top" class="logo" aria-label="葫芦娃官方品牌站首页">
+          <span class="logo-mark">葫</span>
+          <span>葫芦娃
+            <small>HULUWA · OFFICIAL</small>
+          </span>
+        </a>
+        <nav class="main-nav" aria-label="主导航">
+          <a href="#top">首页</a>
+          <a href="#focus">焦点内容</a>
+          <a href="#topics">专题企划</a>
+          <a href="#creators">创作者</a>
+          <a href="#stories">品牌故事</a>
+          <a href="#updates">企业动态</a>
+          <a href="#faq">帮助</a>
+          <a href="#contact">联系</a>
+        </nav>
+        <div class="header-tools">
+          <div class="search-box" role="search">
+            <label for="siteSearch" class="sr-only">搜索站内内容</label>
+            <input type="search" id="siteSearch" placeholder="搜索视频 / 作者 / 专题" autocomplete="off">
+            <button type="button" id="searchBtn">搜索</button>
+          </div>
+          <button class="btn btn-primary" type="button" data-open="submitModal">我要投稿</button>
+          <button class="menu-toggle" id="menuToggle" aria-label="展开导航菜单" aria-expanded="false" aria-controls="mobilePanel">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+    </div>
+    <div class="mobile-panel" id="mobilePanel">
+      <ul>
+        <li><a href="#top">首页</a></li>
+        <li><a href="#focus">焦点内容</a></li>
+        <li><a href="#topics">专题企划</a></li>
+        <li><a href="#creators">创作者矩阵</a></li>
+        <li><a href="#stories">品牌故事与随笔</a></li>
+        <li><a href="#wall">影像墙</a></li>
+        <li><a href="#updates">企业动态</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#contact">联系我们</a></li>
+      </ul>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- ============ 品牌首屏 ============ -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="kicker"><span class="dot"></span>葫芦娃官方网站 · 品牌门户</span>
+        <h1 id="heroTitle">葫芦娃
+          <span class="h1-sub">七个葫芦 · 一条根脉</span>
+        </h1>
+        <p class="hero-intro">
+          作为深耕国风原创影像领域的<strong>企业</strong>，葫芦娃致力于把一代人记忆里的故事，做成今天仍然有人愿意反复打开的<strong>精品内容</strong>。我们的<strong>官方网站</strong>聚合原创短片、幕后纪录、创作者访谈与在地文化观察，为创作者搭建稳定的展示空间，也为每一位观众保留一块不被打扰的观看角落。平台坚持<strong>正版</strong>出品、<strong>高清</strong>呈现，用<strong>专业</strong>的策展逻辑组织内容，让好作品被看见，也让创作本身被尊重。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#stream">浏览本周精选</a>
+          <a class="btn btn-ghost" href="#creators">认识创作者</a>
+          <button class="btn btn-ghost" type="button" data-open="submitModal">投稿入口</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>12,860+</b><span>原创内容存量</span></div>
+          <div class="stat"><b>3,240</b><span>持续创作者</span></div>
+          <div class="stat"><b>86 万</b><span>社区注册用户</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-float">官方发布 · 每周更新</div>
+        <div class="hero-frame">
+          <svg viewBox="0 0 640 460" role="img" aria-label="葫芦藤架下的品牌主视觉：多个葫芦悬挂，寓意一枝多果的内容生态">
+            <defs>
+              <linearGradient id="hgSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#e8f3e9"/>
+                <stop offset="1" stop-color="#cfe3d2"/>
+              </linearGradient>
+              <linearGradient id="hgGourd" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f2c96b"/>
+                <stop offset=".55" stop-color="#e0a83c"/>
+                <stop offset="1" stop-color="#b97a20"/>
+              </linearGradient>
+              <linearGradient id="hgLeaf" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#4f9c6b"/>
+                <stop offset="1" stop-color="#1f6f43"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="460" fill="url(#hgSky)"/>
+            <circle cx="118" cy="96" r="54" fill="#f7e6b8" opacity=".85"/>
+            <path d="M0 330 Q160 286 320 320 T640 300 L640 460 L0 460 Z" fill="#b9d6bd" opacity=".7"/>
+            <path d="M0 366 Q170 326 340 358 T640 340 L640 460 L0 460 Z" fill="#9ec5a5" opacity=".8"/>
+            <path d="M-20 84 Q170 30 340 76 T660 60" stroke="#3f7d54" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M-20 132 Q190 92 360 128 T660 112" stroke="#5f9c74" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="148" cy="112" rx="45" ry="20" fill="url(#hgLeaf)" opacity=".9" transform="rotate(-16 148 112)"/>
+            <ellipse cx="474" cy="104" rx="52" ry="21" fill="url(#hgLeaf)" opacity=".85" transform="rotate(13 474 104)"/>
+            <ellipse cx="322" cy="146" rx="38" ry="16" fill="url(#hgLeaf)" opacity=".7" transform="rotate(-6 322 146)"/>
+            <path d="M196 122 q6 34 -2 52" stroke="#3f7d54" stroke-width="4" fill="none"/>
+            <path d="M424 118 q-4 30 3 46" stroke="#3f7d54" stroke-width="4" fill="none"/>
+            <g>
+              <ellipse cx="196" cy="238" rx="46" ry="54" fill="url(#hgGourd)"/>
+              <ellipse cx="196" cy="292" rx="34" ry="40" fill="url(#hgGourd)"/>
+              <ellipse cx="180" cy="222" rx="12" ry="18" fill="#fff" opacity=".35" transform="rotate(-18 180 222)"/>
+            </g>
+            <g>
+              <ellipse cx="427" cy="214" rx="40" ry="47" fill="url(#hgGourd)"/>
+              <ellipse cx="427" cy="261" rx="29" ry="34" fill="url(#hgGourd)"/>
+              <ellipse cx="414" cy="200" rx="10" ry="15" fill="#fff" opacity=".33" transform="rotate(-16 414 200)"/>
+            </g>
+            <g>
+              <ellipse cx="318" cy="300" rx="33" ry="38" fill="#e9ba58"/>
+              <ellipse cx="318" cy="338" rx="24" ry="27" fill="#e9ba58"/>
+              <ellipse cx="308" cy="289" rx="8" ry="12" fill="#fff" opacity=".3" transform="rotate(-16 308 289)"/>
+            </g>
+            <rect x="0" y="392" width="640" height="68" fill="#123f27" opacity=".12"/>
+            <path d="M40 400 Q320 372 600 400" stroke="#1f6f43" stroke-width="6" fill="none" opacity=".35"/>
+          </svg>
+        </div>
+        <div class="hero-badge">
+          <b>《葫芦里到底有什么》第二季</b>
+          官方发布 · 幕后纪录同步上线
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 焦点内容 ============ -->
+  <section class="section" id="focus" aria-labelledby="focusTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">01 / 焦点内容</div>
+          <h2 id="focusTitle">本周焦点：把老故事讲出新细节</h2>
+          <p class="sec-desc">编辑团队每周从投稿池中挑选值得被反复观看的作品，聚焦创作幕后、在地采风与人物访谈三条主线，构成官方网站的策展入口。</p>
+        </div>
+        <a class="btn btn-ghost" href="#stream">查看全部内容</a>
+      </div>
+
+      <div class="focus-grid">
+        <article class="focus-main">
+          <svg viewBox="0 0 720 430" role="img" aria-label="焦点视频封面：老院藤架下的七色葫芦与采风笔记">
+            <defs>
+              <linearGradient id="fmBg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#1f6f43"/>
+                <stop offset=".6" stop-color="#164e30"/>
+                <stop offset="1" stop-color="#0e2f1e"/>
+              </linearGradient>
+              <linearGradient id="fmAm" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f3cd76"/>
+                <stop offset="1" stop-color="#c98b22"/>
+              </linearGradient>
+            </defs>
+            <rect width="720" height="430" fill="url(#fmBg)"/>
+            <g opacity=".16">
+              <circle cx="600" cy="70" r="130" fill="none" stroke="#eaf5ec" stroke-width="2"/>
+              <circle cx="600" cy="70" r="88" fill="none" stroke="#eaf5ec" stroke-width="2"/>
+              <circle cx="112" cy="380" r="96" fill="none" stroke="#eaf5ec" stroke-width="2"/>
+            </g>
+            <path d="M0 300 Q180 250 360 288 T720 262 L720 430 L0 430 Z" fill="#0a2618" opacity=".8"/>
+            <rect x="58" y="84" width="196" height="252" rx="8" fill="#f5efdf" transform="rotate(-4 156 210)"/>
+            <g transform="rotate(-4 156 210)" fill="#c6b48d" opacity=".8">
+              <rect x="80" y="118" width="152" height="6" rx="3"/>
+              <rect x="80" y="140" width="140" height="6" rx="3"/>
+              <rect x="80" y="162" width="152" height="6" rx="3"/>
+              <rect x="80" y="184" width="112" height="6" rx="3"/>
+              <rect x="80" y="206" width="134" height="6" rx="3"/>
+              <rect x="80" y="228" width="96" height="6" rx="3"/>
+            </g>
+            <ellipse cx="486" cy="168" rx="58" ry="70" fill="url(#fmAm)"/>
+            <ellipse cx="486" cy="240" rx="43" ry="50" fill="url(#fmAm)"/>
+            <ellipse cx="466" cy="146" rx="15" ry="22" fill="#fff" opacity=".3" transform="rotate(-18 466 146)"/>
+            <ellipse cx="592" cy="238" rx="38" ry="46" fill="#e6b552"/>
+            <ellipse cx="592" cy="288" rx="28" ry="33" fill="#e6b552"/>
+            <path d="M486 98 q8 34 -2 54" stroke="#7fbb92" stroke-width="5" fill="none"/>
+            <ellipse cx="536" cy="112" rx="46" ry="19" fill="#3f8d5d" opacity=".85" transform="rotate(12 536 112)"/>
+            <rect x="40" y="34" width="122" height="34" rx="17" fill="#d98a1c"/>
+            <text x="101" y="56" font-size="15" fill="#251c07" text-anchor="middle" font-weight="700">企划首发</text>
+          </svg>
+          <div class="focus-info">
+            <div class="tag-row">
+              <span class="tag solid">官方发布</span>
+              <span class="tag">创作幕后</span>
+              <span class="tag">人物访谈</span>
+            </div>
+            <h3>《葫芦里到底有什么》第二季首集：我们在皖南老院住了二十天</h3>
+            <p>从一只藤架、三张旧木桌开始，记录一次慢下来的采风，以及七位创作者如何把民间故事改写成今天的镜头语言。</p>
+          </div>
+        </article>
+
+        <div class="focus-side">
+          <article class="mini-card">
+            <div class="thumb">
+              <svg viewBox="0 0 320 180" role="img" aria-label="封面：厨房里的葫芦形状陶罐与蒸腾热气">
+                <rect width="320" height="180" fill="#f6ead5"/>
+                <rect y="126" width="320" height="54" fill="#e0c9a4"/>
+                <ellipse cx="112" cy="86" rx="34" ry="42" fill="#d9a04a"/>
+                <ellipse cx="112" cy="124" rx="26" ry="30" fill="#d9a04a"/>
+                <path d="M112 46 q6 20 0 28" stroke="#8a5a2b" stroke-width="4" fill="none"/>
+                <path d="M176 128 q-14 -34 10 -58 q22 -22 44 -2" stroke="#c9b38a" stroke-width="3" fill="none" opacity=".8"/>
+                <circle cx="242" cy="70" r="26" fill="#efc98b"/>
+                <circle cx="234" cy="62" r="8" fill="#fff" opacity=".5"/>
+                <rect x="200" y="140" width="96" height="18" rx="9" fill="#b98d54"/>
+              </svg>
+              <div class="play"><span class="play-icon"></span></div>
+            </div>
+            <div class="mini-body">
+              <h4>用一口老灶还原记忆里的味道</h4>
+              <div class="meta"><span>美食烹饪</span><span>12:40</span></div>
+            </div>
+          </article>
+
+          <article class="mini-card">
+            <div class="thumb">
+              <svg viewBox="0 0 320 180" role="img" aria-label="封面：城市巷弄里的手绘墙面与骑行者剪影">
+                <rect width="320" height="180" fill="#dfe7ee"/>
+                <rect x="0" y="120" width="320" height="60" fill="#b8c6d2"/>
+                <rect x="26" y="34" width="92" height="86" fill="#c9d6df"/>
+                <rect x="132" y="20" width="70" height="100" fill="#b3c4d0"/>
+                <rect x="216" y="46" width="82" height="74" fill="#ccd9e1"/>
+                <g fill="#8fa7b6">
+                  <rect x="38" y="46" width="18" height="20"/>
+                  <rect x="66" y="46" width="18" height="20"/>
+                  <rect x="38" y="76" width="18" height="20"/>
+                  <rect x="66" y="76" width="18" height="20"/>
+                  <rect x="146" y="36" width="16" height="18"/>
+                  <rect x="172" y="36" width="16" height="18"/>
+                  <rect x="230" y="62" width="16" height="18"/>
+                  <rect x="256" y="62" width="16" height="18"/>
+                </g>
+                <circle cx="150" cy="132" r="12" fill="none" stroke="#2f4351" stroke-width="3"/>
+                <circle cx="196" cy="132" r="12" fill="none" stroke="#2f4351" stroke-width="3"/>
+                <path d="M150 132 L170 108 L196 132 M170 108 L178 92" stroke="#2f4351" stroke-width="3" fill="none"/>
+              </svg>
+              <div class="play"><span class="play-icon"></span></div>
+            </div>
+            <div class="mini-body">
+              <h4>骑行穿过老城区的六个清晨</h4>
+              <div class="meta"><span>城市探索</span><span>08:22</span></div>
+            </div>
+          </article>
+
+          <article class="mini-card">
+            <div class="thumb">
+              <svg viewBox="0 0 320 180" role="img" aria-label="封面：录音棚内的麦克风与声波线条">
+                <rect width="320" height="180" fill="#20283a"/>
+                <circle cx="160" cy="78" r="34" fill="#33405a"/>
+                <rect x="152" y="42" width="16" height="52" rx="8" fill="#8ea2c4"/>
+                <rect x="146" y="96" width="28" height="34" rx="6" fill="#5a6d90"/>
+                <g stroke="#e0a83c" stroke-width="2.5" fill="none" opacity=".9">
+                  <path d="M60 84 q10 -18 20 0 t20 0"/>
+                  <path d="M220 84 q10 -18 20 0 t20 0"/>
+                  <path d="M44 110 q8 -12 16 0 t16 0"/>
+                  <path d="M240 110 q8 -12 16 0 t16 0"/>
+                </g>
+                <rect x="0" y="150" width="320" height="30" fill="#18202f"/>
+              </svg>
+              <div class="play"><span class="play-icon"></span></div>
+            </div>
+            <div class="mini-body">
+              <h4>给短片配一段会呼吸的声音</h4>
+              <div class="meta"><span>教程干货</span><span>15:06</span></div>
+            </div>
+          </article>
+
+          <article class="mini-card">
+            <div class="thumb">
+              <svg viewBox="0 0 320 180" role="img" aria-label="封面：手作工作台上的刻刀、木料与葫芦挂件">
+                <rect width="320" height="180" fill="#f2e6d3"/>
+                <rect y="118" width="320" height="62" fill="#c9a878"/>
+                <rect x="40" y="60" width="120" height="14" rx="7" fill="#a97c46"/>
+                <rect x="52" y="74" width="96" height="44" rx="6" fill="#e2cba7"/>
+                <path d="M196 118 q0 -34 22 -44 q22 10 22 44 q0 22 -22 22 q-22 0 -22 -22 Z" fill="#d9a04a"/>
+                <path d="M218 74 q4 14 0 20" stroke="#8a5a2b" stroke-width="3" fill="none"/>
+                <rect x="252" y="70" width="8" height="52" rx="4" fill="#7c8b93"/>
+                <rect x="244" y="64" width="24" height="10" rx="5" fill="#a8b6bd"/>
+              </svg>
+              <div class="play"><span class="play-icon"></span></div>
+            </div>
+            <div class="mini-body">
+              <h4>木作小课：做一只可以挂起来的葫芦</h4>
+              <div class="meta"><span>手作DIY</span><span>18:35</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 热门视频流 ============ -->
+  <section class="section alt" id="stream" aria-labelledby="streamTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">02 / 热门视频流</div>
+          <h2 id="streamTitle">正在被观看的六支短片</h2>
+          <p class="sec-desc">来自投稿池的真实作品，覆盖日常记录、行业观察与情感故事。点击标签可快速筛选，喜欢的内容可以点亮或收藏。</p>
+        </div>
+      </div>
+
+      <div class="stream-toolbar" id="streamFilter" role="group" aria-label="内容标签筛选">
+        <button class="chip active" data-filter="all" type="button">全部</button>
+        <button class="chip" data-filter="幕后" type="button">创作幕后</button>
+        <button class="chip" data-filter="日常" type="button">日常记录</button>
+        <button class="chip" data-filter="访谈" type="button">人物访谈</button>
+        <button class="chip" data-filter="科普" type="button">知识科普</button>
+      </div>
+
+      <div class="video-grid" id="videoGrid">
+
+        <article class="video-card" data-cat="幕后">
+          <div class="cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="封面：分镜手稿铺满木桌，旁边放着铅笔与咖啡">
+              <rect width="400" height="225" fill="#efe7d8"/>
+              <rect y="160" width="400" height="65" fill="#c9ab80"/>
+              <g transform="rotate(-3 120 100)">
+                <rect x="26" y="36" width="120" height="96" rx="6" fill="#fffdf6" stroke="#d8ccb4" stroke-width="2"/>
+                <rect x="38" y="50" width="46" height="34" fill="#dfeade"/>
+                <rect x="92" y="50" width="42" height="34" fill="#f0e2c9"/>
+                <rect x="38" y="92" width="96" height="24" fill="#e8edf0"/>
+              </g>
+              <g transform="rotate(4 250 96)">
+                <rect x="172" y="28" width="128" height="100" rx="6" fill="#fffdf6" stroke="#d8ccb4" stroke-width="2"/>
+                <circle cx="210" cy="70" r="20" fill="#e6c58f"/>
+                <rect x="240" y="52" width="46" height="8" rx="4" fill="#d5d9cf"/>
+                <rect x="240" y="70" width="38" height="8" rx="4" fill="#d5d9cf"/>
+                <rect x="190" y="100" width="92" height="14" rx="5" fill="#dfe7dd"/>
+              </g>
+              <rect x="316" y="128" width="8" height="58" rx="4" fill="#8a5a2b"/>
+              <rect x="310" y="120" width="20" height="12" rx="6" fill="#b98a58"/>
+              <circle cx="352" cy="150" r="20" fill="#f5f1e6"/>
+              <circle cx="352" cy="150" r="13" fill="#8a5a2b"/>
+            </svg>
+            <span class="overlay-tag">创作幕后</span>
+            <span class="dur">14:28</span>
+            <div class="play-fab"><span class="play-icon"></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>从一个念头到分镜：短片《藤》的三次推翻重来</h3>
+            <p class="summary">导演把三版被废弃的分镜摊在桌上，逐格讲清楚为什么放弃，以及一次次的删减如何让故事更干净。</p>
+            <div class="vc-tags"><span>幕后</span><span>分镜</span></div>
+            <div class="vc-foot">
+              <span class="author-mini"><span class="avatar av-1">青</span>青秧工作室</span>
+              <div class="vc-actions">
+                <button class="icon-btn like-btn" type="button" aria-pressed="false">♡ <span class="like-count">2.4万</span></button>
+                <button class="icon-btn save-btn" type="button" aria-pressed="false">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-cat="日常">
+          <div class="cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="封面：清晨窗台上的绿植、陶杯与斜射进来的阳光">
+              <rect width="400" height="225" fill="#e9f1ea"/>
+              <rect x="0" y="150" width="400" height="75" fill="#c4d8c7"/>
+              <rect x="40" y="42" width="130" height="104" rx="4" fill="#cfe3e8"/>
+              <path d="M40 42 L105 42 L40 104 Z" fill="#eaf3f5"/>
+              <rect x="196" y="118" width="46" height="44" rx="6" fill="#d9a04a"/>
+              <path d="M219 118 q0 -26 16 -34" stroke="#4f8f66" stroke-width="4" fill="none"/>
+              <ellipse cx="243" cy="80" rx="20" ry="11" fill="#5fa176" transform="rotate(-24 243 80)"/>
+              <ellipse cx="212" cy="92" rx="17" ry="9" fill="#7dbb8f" transform="rotate(20 212 92)"/>
+              <rect x="276" y="128" width="64" height="34" rx="8" fill="#f6f1e4"/>
+              <rect x="288" y="120" width="40" height="10" rx="5" fill="#e5dcc6"/>
+              <path d="M0 176 q120 -26 220 0 t180 -12" stroke="#a9c8ad" stroke-width="3" fill="none"/>
+            </svg>
+            <span class="overlay-tag">日常记录</span>
+            <span class="dur">09:12</span>
+            <div class="play-fab"><span class="play-icon"></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>六点半起床之后：一个人的晨间两小时</h3>
+            <p class="summary">不看手机、不开电视，只是浇水、煮水、写三行字。记录一段被刻意放慢的日常，和它带来的稳定感。</p>
+            <div class="vc-tags"><span>日常</span><span>生活方式</span></div>
+            <div class="vc-foot">
+              <span class="author-mini"><span class="avatar av-2">禾</span>禾下乘凉</span>
+              <div class="vc-actions">
+                <button class="icon-btn like-btn" type="button" aria-pressed="false">♡ <span class="like-count">1.8万</span></button>
+                <button class="icon-btn save-btn" type="button" aria-pressed="false">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-cat="访谈">
+          <div class="cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="封面：两位创作者隔着矮桌对坐，桌上有茶杯与录音设备">
+              <rect width="400" height="225" fill="#f3efe6"/>
+              <rect x="0" y="164" width="400" height="61" fill="#d8cbb4"/>
+              <circle cx="128" cy="86" r="26" fill="#3a7fa8"/>
+              <rect x="98" y="116" width="60" height="52" rx="14" fill="#3a7fa8"/>
+              <circle cx="282" cy="92" r="24" fill="#a85e2b"/>
+              <rect x="254" y="120" width="56" height="48" rx="13" fill="#a85e2b"/>
+              <rect x="168" y="132" width="76" height="12" rx="6" fill="#b99b6f"/>
+              <rect x="176" y="122" width="14" height="12" rx="3" fill="#f6f1e4"/>
+              <rect x="222" y="122" width="14" height="12" rx="3" fill="#f6f1e4"/>
+              <circle cx="200" cy="108" r="10" fill="#8b9a90"/>
+              <rect x="196" y="98" width="8" height="12" rx="4" fill="#6d7c73"/>
+            </svg>
+            <span class="overlay-tag">人物访谈</span>
+            <span class="dur">21:45</span>
+            <div class="play-fab"><span class="play-icon"></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>访谈：做了十年美术指导，他为什么回到小城拍纪录片</h3>
+            <p class="summary">聊手艺人的耐心、聊镜头前的紧张，也聊为什么一棵树能坚持拍四年。语速很慢，信息很密。</p>
+            <div class="vc-tags"><span>访谈</span><span>人物</span></div>
+            <div class="vc-foot">
+              <span class="author-mini"><span class="avatar av-3">舟</span>江上一舟</span>
+              <div class="vc-actions">
+                <button class="icon-btn like-btn" type="button" aria-pressed="false">♡ <span class="like-count">3.1万</span></button>
+                <button class="icon-btn save-btn" type="button" aria-pressed="false">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-cat="科普">
+          <div class="cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="封面：帧率与时间轴示意图，配以胶片格与曲线">
+              <rect width="400" height="225" fill="#1d2a3a"/>
+              <g fill="#39506b">
+                <rect x="22" y="26" width="60" height="42" rx="4"/>
+                <rect x="90" y="26" width="60" height="42" rx="4"/>
+                <rect x="158" y="26" width="60" height="42" rx="4"/>
+                <rect x="226" y="26" width="60" height="42" rx="4"/>
+                <rect x="294" y="26" width="60" height="42" rx="4"/>
+              </g>
+              <path d="M20 130 q46 -46 92 0 t92 0 t92 0 t92 0" stroke="#4fb389" stroke-width="3" fill="none"/>
+              <rect x="20" y="166" width="356" height="10" rx="5" fill="#2e435c"/>
+              <rect x="20" y="166" width="212" height="10" rx="5" fill="#e0a83c"/>
+              <circle cx="232" cy="171" r="10" fill="#f6f1e4"/>
+              <text x="22" y="196" font-size="12" fill="#8ea2c4">0s</text>
+              <text x="330" y="196" font-size="12" fill="#8ea2c4">24fps</text>
+            </svg>
+            <span class="overlay-tag">知识科普</span>
+            <span class="dur">07:50</span>
+            <div class="play-fab"><span class="play-icon"></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>帧率、快门、光线：三个参数决定画面的“呼吸感”</h3>
+            <p class="summary">用同一场景拍三组对比素材，把抽象的技术参数落到肉眼可见的差别上，新手也能照着调。</p>
+            <div class="vc-tags"><span>科普</span><span>教程</span></div>
+            <div class="vc-foot">
+              <span class="author-mini"><span class="avatar av-4">格</span>格子影像笔记</span>
+              <div class="vc-actions">
+                <button class="icon-btn like-btn" type="button" aria-pressed="false">♡ <span class="like-count">9,632</span></button>
+                <button class="icon-btn save-btn" type="button" aria-pressed="false">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-cat="幕后">
+          <div class="cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="封面：外景拍摄现场，灯光架与摄影机剪影在暮色中">
+              <rect width="400" height="225" fill="#3a3550"/>
+              <rect y="150" width="400" height="75" fill="#262238"/>
+              <circle cx="322" cy="58" r="30" fill="#f0c377" opacity=".9"/>
+              <rect x="60" y="86" width="10" height="76" fill="#565074"/>
+              <rect x="34" y="72" width="62" height="20" rx="5" fill="#6f6a90"/>
+              <rect x="182" y="102" width="52" height="34" rx="6" fill="#6f6a90"/>
+              <path d="M234 116 L262 100 L262 140 L234 124 Z" fill="#8d88ac"/>
+              <rect x="196" y="136" width="8" height="26" fill="#565074"/>
+              <rect x="214" y="136" width="8" height="26" fill="#565074"/>
+              <rect x="196" y="160" width="42" height="6" rx="3" fill="#3d3956"/>
+              <rect x="300" y="120" width="8" height="42" fill="#565074"/>
+              <circle cx="304" cy="112" r="14" fill="#e0a83c" opacity=".7"/>
+            </svg>
+            <span class="overlay-tag">创作幕后</span>
+            <span class="dur">11:33</span>
+            <div class="play-fab"><span class="play-icon"></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>只有三个人，怎么拍出一支完整的短片</h3>
+            <p class="summary">导演兼摄影、制片兼场务、后期兼配乐。小团队的极限协作记录，附一份可以照着用的排期表。</p>
+            <div class="vc-tags"><span>幕后</span><span>团队</span></div>
+            <div class="vc-foot">
+              <span class="author-mini"><span class="avatar av-5">栗</span>栗子小组</span>
+              <div class="vc-actions">
+                <button class="icon-btn like-btn" type="button" aria-pressed="false">♡ <span class="like-count">1.2万</span></button>
+                <button class="icon-btn save-btn" type="button" aria-pressed="false">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-cat="日常">
+          <div class="cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="封面：秋日山道上的行人背影与飘落的黄叶">
+              <rect width="400" height="225" fill="#f0e3cc"/>
+              <path d="M0 168 Q120 138 240 164 T400 148 L400 225 L0 225 Z" fill="#cbae7c"/>
+              <path d="M0 196 Q140 172 260 194 T400 182 L400 225 L0 225 Z" fill="#a98a58"/>
+              <circle cx="200" cy="96" r="15" fill="#6b5a43"/>
+              <path d="M200 112 q-16 22 -12 56 q10 6 24 0 q4 -34 -12 -56 Z" fill="#7c6a50"/>
+              <g fill="#d99a33" opacity=".85">
+                <ellipse cx="96" cy="70" rx="14" ry="8" transform="rotate(22 96 70)"/>
+                <ellipse cx="300" cy="58" rx="12" ry="7" transform="rotate(-18 300 58)"/>
+                <ellipse cx="330" cy="120" rx="13" ry="7" transform="rotate(34 330 120)"/>
+                <ellipse cx="72" cy="132" rx="11" ry="6" transform="rotate(-26 72 132)"/>
+              </g>
+              <path d="M40 20 q30 16 60 4" stroke="#b98d54" stroke-width="3" fill="none"/>
+            </svg>
+            <span class="overlay-tag">日常记录</span>
+            <span class="dur">06:18</span>
+            <div class="play-fab"><span class="play-icon"></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>走完这段山路，我把秋天的声音收了进来</h3>
+            <p class="summary">没有旁白，只有脚步、风、落叶和远处的狗吠。一次关于“安静”的实验性记录。</p>
+            <div class="vc-tags"><span>日常</span><span>治愈影像</span></div>
+            <div class="vc-foot">
+              <span class="author-mini"><span class="avatar av-6">拾</span>拾光小铺</span>
+              <div class="vc-actions">
+                <button class="icon-btn like-btn" type="button" aria-pressed="false">♡ <span class="like-count">7,415</span></button>
+                <button class="icon-btn save-btn" type="button" aria-pressed="false">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 专题企划 ============ -->
+  <section class="section" id="topics" aria-labelledby="topicsTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">03 / 专题企划</div>
+          <h2 id="topicsTitle">四条并行的内容线索</h2>
+          <p class="sec-desc">专题由编辑团队与创作者共同策划，围绕国风、手艺、城市与青年表达展开，每个专题持续更新并开放投稿。</p>
+        </div>
+      </div>
+      <div class="topic-row">
+
+        <article class="topic-card">
+          <div class="t-cover">
+            <span class="t-status live">更新中</span>
+            <svg viewBox="0 0 320 240" role="img" aria-label="专题封面：层叠山峦与葫芦藤剪影">
+              <rect width="320" height="240" fill="#e5efe6"/>
+              <path d="M0 150 L66 92 L120 148 L176 76 L246 152 L320 104 L320 240 L0 240 Z" fill="#8fb99a"/>
+              <path d="M0 178 L70 132 L134 180 L200 122 L268 182 L320 148 L320 240 L0 240 Z" fill="#4f8f66"/>
+              <path d="M0 206 L90 170 L170 208 L250 172 L320 204 L320 240 L0 240 Z" fill="#1f6f43"/>
+              <path d="M40 74 q60 -26 120 -4 t120 -6" stroke="#8a5a2b" stroke-width="4" fill="none"/>
+              <ellipse cx="96" cy="96" rx="16" ry="10" fill="#d9a04a"/>
+              <ellipse cx="232" cy="86" rx="13" ry="8" fill="#d9a04a"/>
+            </svg>
+          </div>
+          <div class="t-body">
+            <h3>国风短片计划</h3>
+            <p>把民间叙事拆成现代镜头：12 位导演、12 支短片、12 段访谈。</p>
+          </div>
+          <div class="t-meta wrap" style="width:100%;padding:0 16px 16px;"><span>已更新 9 支</span><span>参与 12 位作者</span></div>
+        </article>
+
+        <article class="topic-card">
+          <div class="t-cover">
+            <span class="t-status">长期企划</span>
+            <svg viewBox="0 0 320 240" role="img" aria-label="专题封面：手作工作台上的木料、刻刀与卷尺">
+              <rect width="320" height="240" fill="#f3e8d7"/>
+              <rect y="160" width="320" height="80" fill="#c9a878"/>
+              <rect x="30" y="60" width="130" height="16" rx="8" fill="#a97c46"/>
+              <rect x="46" y="76" width="98" height="70" rx="6" fill="#e6d2b1"/>
+              <path d="M196 160 q0 -50 30 -62 q30 12 30 62 q0 28 -30 28 q-30 0 -30 -28 Z" fill="#d9a04a"/>
+              <rect x="262" y="86" width="9" height="70" rx="4" fill="#7c8b93"/>
+              <rect x="252" y="78" width="28" height="12" rx="6" fill="#a8b6bd"/>
+              <path d="M28 190 h264" stroke="#8a5a2b" stroke-width="2" opacity=".5"/>
+            </svg>
+          </div>
+          <div class="t-body">
+            <h3>手艺人档案</h3>
+            <p>走近木刻、漆器、竹编与陶作，记录一门手艺的真实节奏与生计。</p>
+          </div>
+          <div class="t-meta" style="padding:0 16px 16px;"><span>已更新 16 期</span><span>口述实录</span></div>
+        </article>
+
+        <article class="topic-card">
+          <div class="t-cover">
+            <span class="t-status">开放投稿</span>
+            <svg viewBox="0 0 320 240" role="img" aria-label="专题封面：城市街区俯视图与街灯、步道">
+              <rect width="320" height="240" fill="#dbe6ee"/>
+              <g fill="#b7c8d6">
+                <rect x="0" y="0" width="120" height="84"/>
+                <rect x="140" y="0" width="90" height="84"/>
+                <rect x="0" y="104" width="120" height="70"/>
+                <rect x="140" y="104" width="90" height="70"/>
+                <rect x="244" y="0" width="76" height="84"/>
+                <rect x="244" y="104" width="76" height="70"/>
+              </g>
+              <rect x="0" y="190" width="320" height="50" fill="#c6d5e0"/>
+              <rect x="120" y="0" width="20" height="240" fill="#e8eef3"/>
+              <rect x="0" y="84" width="320" height="20" fill="#e8eef3"/>
+              <rect x="230" y="88" width="6" height="42" fill="#8fa7b6"/>
+              <circle cx="233" cy="86" r="8" fill="#f0c377"/>
+              <rect x="60" y="150" width="22" height="30" fill="#94acbc"/>
+              <rect x="20" y="150" width="22" height="30" fill="#94acbc"/>
+            </svg>
+          </div>
+          <div class="t-body">
+            <h3>小城十二时辰</h3>
+            <p>由本地创作者自行拍摄，用一天的时间切开一座城的真实切片。</p>
+          </div>
+          <div class="t-meta" style="padding:0 16px 16px;"><span>已更新 24 期</span><span>持续征集中</span></div>
+        </article>
+
+        <article class="topic-card">
+          <div class="t-cover">
+            <span class="t-status">即将上线</span>
+            <svg viewBox="0 0 320 240" role="img" aria-label="专题封面：青年创作者围坐讨论，墙面贴满便签">
+              <rect width="320" height="240" fill="#f0e9f1"/>
+              <rect y="176" width="320" height="64" fill="#cbbfc9"/>
+              <g fill="#f2c96b">
+                <rect x="30" y="34" width="42" height="42" rx="3" transform="rotate(-5 51 55)"/>
+                <rect x="86" y="28" width="42" height="42" rx="3" transform="rotate(4 107 49)"/>
+              </g>
+              <g fill="#9fc7a9">
+                <rect x="142" y="34" width="42" height="42" rx="3" transform="rotate(-3 163 55)"/>
+                <rect x="198" y="28" width="42" height="42" rx="3" transform="rotate(6 219 49)"/>
+                <rect x="254" y="36" width="42" height="42" rx="3" transform="rotate(-4 275 57)"/>
+              </g>
+              <g fill="#6f6a90">
+                <circle cx="80" cy="150" r="18"/>
+                <circle cx="146" cy="156" r="18"/>
+                <circle cx="212" cy="150" r="18"/>
+              </g>
+              <rect x="56" y="166" width="48" height="42" rx="12" fill="#8d88ac"/>
+              <rect x="122" y="172" width="48" height="38" rx="12" fill="#8d88ac"/>
+              <rect x="188" y="166" width="48" height="42" rx="12" fill="#8d88ac"/>
+            </svg>
+          </div>
+          <div class="t-body">
+            <h3>青年表达工作坊</h3>
+            <p>把创意变成可执行脚本，提供选题会、粗剪反馈与成片展映的完整路径。</p>
+          </div>
+          <div class="t-meta" style="padding:0 16px 16px;"><span>报名倒计时</span><span>限额 40 位</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 创作者矩阵 ============ -->
+  <section class="section alt" id="creators" aria-labelledby="creatorsTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">04 / 创作者矩阵</div>
+          <h2 id="creatorsTitle">把镜头交给这些长期主义者</h2>
+          <p class="sec-desc">平台目前持续合作 3,240 位创作者，覆盖纪录、动画、美食、手作与城市影像。以下为近期活跃作者，点击可查看简介。</p>
+        </div>
+      </div>
+
+      <div class="creator-grid">
+
+        <article class="creator-card">
+          <div class="cc-top">
+            <div class="cc-avatar av-1">青</div>
+            <div>
+              <div class="cc-name">青秧工作室</div>
+              <div class="cc-field">纪录短片 · 幕后拆解</div>
+            </div>
+          </div>
+          <p class="cc-bio">六人小团队，专注把创作过程本身拍成作品。习惯在开机前写三千字导演阐述，也习惯在剪辑台上删掉一半镜头。</p>
+          <div class="cc-nums">
+            <div><b>168</b><span>作品数</span></div>
+            <div><b>32.6万</b><span>关注者</span></div>
+          </div>
+          <div class="cc-actions">
+            <button class="btn btn-primary" type="button" data-creator="青秧工作室：六人纪录团队，代表作《藤》《三次推翻重来》。主张把失败的过程也如实呈现。">查看简介</button>
+            <button class="btn btn-ghost" type="button" data-share="青秧工作室">分享</button>
+          </div>
+        </article>
+
+        <article class="creator-card">
+          <div class="cc-top">
+            <div class="cc-avatar av-2">禾</div>
+            <div>
+              <div class="cc-name">禾下乘凉</div>
+              <div class="cc-field">日常记录 · 生活方式</div>
+            </div>
+          </div>
+          <p class="cc-bio">一个人、一台小相机，记录院子里的四季与一日三餐。内容更新不快，但每条都自己剪、自己配音。</p>
+          <div class="cc-nums">
+            <div><b>214</b><span>作品数</span></div>
+            <div><b>41.9万</b><span>关注者</span></div>
+          </div>
+          <div class="cc-actions">
+            <button class="btn btn-primary" type="button" data-creator="禾下乘凉：日常影像记录者，作品多为自家庭院与厨房，坚持自然光拍摄，不使用滤镜。">查看简介</button>
+            <button class="btn btn-ghost" type="button" data-share="禾下乘凉">分享</button>
+          </div>
+        </article>
+
+        <article class="creator-card">
+          <div class="cc-top">
+            <div class="cc-avatar av-3">舟</div>
+            <div>
+              <div class="cc-name">江上一舟</div>
+              <div class="cc-field">人物访谈 · 文化观察</div>
+            </div>
+          </div>
+          <p class="cc-bio">前杂志编辑，现做长访谈。相信一个小时的对话里，总有一句话值得被留下。提问很慢，但从不敷衍。</p>
+          <div class="cc-nums">
+            <div><b>96</b><span>作品数</span></div>
+            <div><b>27.3万</b><span>关注者</span></div>
+          </div>
+          <div class="cc-actions">
+            <button class="btn btn-primary" type="button" data-creator="江上一舟：访谈栏目主理人，已完成 96 期人物对谈，覆盖手艺人、导演、教师与普通劳动者。">查看简介</button>
+            <button class="btn btn-ghost" type="button" data-share="江上一舟">分享</button>
+          </div>
+        </article>
+
+        <article class="creator-card">
+          <div class="cc-top">
+            <div class="cc-avatar av-4">格</div>
+            <div>
+              <div class="cc-name">格子影像笔记</div>
+              <div class="cc-field">技术科普 · 教程干货</div>
+            </div>
+          </div>
+          <p class="cc-bio">把参数讲成人话的影像老师。每条教程都配可下载的对照素材，希望新手少走一点弯路。</p>
+          <div class="cc-nums">
+            <div><b>132</b><span>作品数</span></div>
+            <div><b>19.8万</b><span>关注者</span></div>
+          </div>
+          <div class="cc-actions">
+            <button class="btn btn-primary" type="button" data-creator="格子影像笔记：影像技术科普作者，课程累计播放 2,100 万次，擅长用对比实验讲清楚复杂参数。">查看简介</button>
+            <button class="btn btn-ghost" type="button" data-share="格子影像笔记">分享</button>
+          </div>
+        </article>
+
+        <article class="creator-card">
+          <div class="cc-top">
+            <div class="cc-avatar av-5">栗</div>
+            <div>
+              <div class="cc-name">栗子小组</div>
+              <div class="cc-field">小团队创作 · 实战分享</div>
+            </div>
+          </div>
+          <p class="cc-bio">三个人的创作小组，擅长用有限预算完成完整叙事。乐于公开排期表、预算表和踩过的坑。</p>
+          <div class="cc-nums">
+            <div><b>78</b><span>作品数</span></div>
+            <div><b>12.4万</b><span>关注者</span></div>
+          </div>
+          <div class="cc-actions">
+            <button class="btn btn-primary" type="button" data-creator="栗子小组：三人协作团队，专注低成本短片创作，已公开六套完整制片模板供社区下载。">查看简介</button>
+            <button class="btn btn-ghost" type="button" data-share="栗子小组">分享</button>
+          </div>
+        </article>
+
+        <article class="creator-card">
+          <div class="cc-top">
+            <div class="cc-avatar av-6">拾</div>
+            <div>
+              <div class="cc-name">拾光小铺</div>
+              <div class="cc-field">治愈影像 · 环境声音</div>
+            </div>
+          </div>
+          <p class="cc-bio">专注收集环境声音与无人风景镜头。没有旁白，没有配乐，只把一段安静完整地交给你。</p>
+          <div class="cc-nums">
+            <div><b>121</b><span>作品数</span></div>
+            <div><b>23.5万</b><span>关注者</span></div>
+          </div>
+          <div class="cc-actions">
+            <button class="btn btn-primary" type="button" data-creator="拾光小铺：环境声音与治愈影像创作者，坚持同期声录制，作品常被用于睡前观看场景。">查看简介</button>
+            <button class="btn btn-ghost" type="button" data-share="拾光小铺">分享</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 品牌故事 + 用户评价 ============ -->
+  <section class="section" id="stories" aria-labelledby="storiesTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">05 / 品牌故事与社区声音</div>
+          <h2 id="storiesTitle">我们为什么做这件事</h2>
+          <p class="sec-desc">一边是品牌团队的自述，一边是社区里真实发生过的反馈。两个视角放在一起，才构成完整的官方网站叙事。</p>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="story-list">
+          <article class="story-item">
+            <h3>从一个藤架开始</h3>
+            <p>最早的时候，团队只是想在老院子里架一个藤架，把七个葫芦从春天拍到秋天。拍着拍着发现，真正值得记录的不是葫芦本身，而是每天来看看它们的人——邻居家的孩子、路过的老人、蹲在墙角画速写的学生。于是我们决定把这件事做久一点，做成一个能让更多人参与进来的内容平台。</p>
+            <div class="sig">—— 品牌内容部</div>
+          </article>
+          <article class="story-item">
+            <h3>不追热点的一年</h3>
+            <p>有一年我们几乎放弃了所有热点选题，只做自己真正感兴趣的三条线索：手艺、城市、青年表达。数据确实慢了下来，但留下来的观众更愿意看完、更愿意留言、也更愿意投稿。这让我们确认了一件事：<strong>品质</strong>不是把每一帧做到极致，而是让每个选题都值得被认真对待。</p>
+            <div class="sig">—— 品牌内容部</div>
+          </article>
+          <article class="story-item">
+            <h3>把投稿门槛降到最低</h3>
+            <p>很多创作者卡在第一步：不知道投什么、怎么投。我们把投稿指南从十二页压到一页，列出三个具体问题：你想拍什么、为什么是你、需要什么支持。之后的每一期工作坊，我们都按这三个问题开始讨论。近一年有 480 多位作者通过这个入口发出第一支作品。</p>
+            <div class="sig">—— 创作者运营组</div>
+          </article>
+        </div>
+
+        <div class="review-list">
+          <article class="review">
+            <div class="r-head">
+              <span class="avatar av-1">林</span>
+              <span class="r-name">林间散步</span>
+              <span class="r-time">3 天前</span>
+            </div>
+            <p>看了《一个人晨间两小时》，第二天真的六点半起来了，虽然只坚持了两天，但那种被提醒的感觉很好。</p>
+            <div class="stars">★★★★★</div>
+          </article>
+          <article class="review">
+            <div class="r-head">
+              <span class="avatar av-4">老</span>
+              <span class="r-name">老周修表</span>
+              <span class="r-time">5 天前</span>
+            </div>
+            <p>手艺人档案这一期拍得很好，没有刻意煽情，也没有把老手艺说成快要消失的奇观，就是正常地把工作过程拍下来。</p>
+            <div class="stars">★★★★★</div>
+          </article>
+          <article class="review">
+            <div class="r-head">
+              <span class="avatar av-3">南</span>
+              <span class="r-name">南墙根儿</span>
+              <span class="r-time">1 周前</span>
+            </div>
+            <p>提个建议：希望专题页面能按更新时间排序，现在翻找以前的期数有点费劲。其他都挺好。</p>
+            <div class="stars">★★★★☆</div>
+          </article>
+          <article class="review">
+            <div class="r-head">
+              <span class="avatar av-5">阿</span>
+              <span class="r-name">阿柚不加班</span>
+              <span class="r-time">1 周前</span>
+            </div>
+            <p>帧率那期教程太实用了，照着调了一遍素材，画面质感立刻不一样。希望多做点这种能直接上手的内容。</p>
+            <div class="stars">★★★★★</div>
+          </article>
+          <article class="review">
+            <div class="r-head">
+              <span class="avatar av-6">橙</span>
+              <span class="r-name">橙子酱的猫</span>
+              <span class="r-time">2 周前</span>
+            </div>
+            <p>投稿指南写得比很多平台的规范清楚多了，第一次投稿就通过了初审，编辑还给了具体修改建议，很受用。</p>
+            <div class="stars">★★★★★</div>
+          </article>
+          <article class="review">
+            <div class="r-head">
+              <span class="avatar av-2">竹</span>
+              <span class="r-name">竹林边的小院</span>
+              <span class="r-time">2 周前</span>
+            </div>
+            <p>内容整体很干净，没有那种一打开就喧闹的感觉。就是更新频率要是能再快一点就更好了。</p>
+            <div class="stars">★★★★☆</div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 影像墙 ============ -->
+  <section class="section alt" id="wall" aria-labelledby="wallTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">06 / 社区影像墙</div>
+          <h2 id="wallTitle">来自 480 位投稿者的画面</h2>
+          <p class="sec-desc">影像墙按投稿时间轮播展示，题材、色彩与构图各不相同。每一张都保留作者署名与原片信息。</p>
+        </div>
+      </div>
+
+      <div class="wall">
+        <figure class="w-lg">
+          <svg viewBox="0 0 480 240" role="img" aria-label="影像墙作品：雨后的青石巷与撑伞行人，倒影清晰">
+            <rect width="480" height="240" fill="#cfdde4"/>
+            <rect y="132" width="480" height="108" fill="#a9bfc9"/>
+            <rect x="30" y="40" width="110" height="92" fill="#b8cbd5"/>
+            <rect x="152" y="26" width="92" height="106" fill="#c4d5dd"/>
+            <rect x="256" y="48" width="104" height="84" fill="#b2c7d2"/>
+            <rect x="372" y="34" width="82" height="98" fill="#c9d8df"/>
+            <g fill="#8ba3b0">
+              <rect x="44" y="54" width="20" height="24"/>
+              <rect x="76" y="54" width="20" height="24"/>
+              <rect x="164" y="42" width="18" height="22"/>
+              <rect x="196" y="42" width="18" height="22"/>
+              <rect x="270" y="64" width="20" height="22"/>
+              <rect x="386" y="50" width="18" height="22"/>
+            </g>
+            <path d="M206 132 q0 -30 18 -38 q18 8 18 38 Z" fill="#3d5570"/>
+            <rect x="220" y="122" width="4" height="46" fill="#3d5570"/>
+            <ellipse cx="222" cy="184" rx="20" ry="6" fill="#7f97a5" opacity=".6"/>
+            <path d="M0 178 q120 12 240 0 t240 8" stroke="#93aeb9" stroke-width="2" fill="none" opacity=".7"/>
+          </svg>
+          <figcaption>雨后巷口 · 作者 南墙根儿</figcaption>
+        </figure>
+        <figure class="w-md">
+          <svg viewBox="0 0 320 118" role="img" aria-label="影像墙作品：摊开的速写本与铅笔，画着葫芦藤">
+            <rect width="320" height="118" fill="#f4ecda"/>
+            <rect x="24" y="16" width="130" height="88" rx="4" fill="#fffdf6"/>
+            <rect x="164" y="16" width="130" height="88" rx="4" fill="#fffaf0"/>
+            <path d="M40 84 q30 -34 60 -20 t44 4" stroke="#5f8f6d" stroke-width="2.5" fill="none"/>
+            <ellipse cx="86" cy="62" rx="11" ry="14" fill="#d9a04a"/>
+            <ellipse cx="86" cy="78" rx="8" ry="9" fill="#d9a04a"/>
+            <rect x="184" y="34" width="82" height="4" rx="2" fill="#d5cbb4"/>
+            <rect x="184" y="48" width="70" height="4" rx="2" fill="#d5cbb4"/>
+            <rect x="184" y="62" width="82" height="4" rx="2" fill="#d5cbb4"/>
+            <rect x="184" y="76" width="54" height="4" rx="2" fill="#d5cbb4"/>
+          </svg>
+          <figcaption>速写本第七页 · 作者 木叶</figcaption>
+        </figure>
+        <figure class="w-sm">
+          <svg viewBox="0 0 320 118" role="img" aria-label="影像墙作品：傍晚的公交车窗外流动灯光">
+            <rect width="320" height="118" fill="#2b3446"/>
+            <rect x="18" y="18" width="284" height="82" rx="8" fill="#3d4a61"/>
+            <g stroke="#e0a83c" stroke-width="3" opacity=".85">
+              <path d="M30 80 q20 -22 40 0 t40 0"/>
+              <path d="M150 74 q20 -18 40 0 t40 0"/>
+            </g>
+            <circle cx="256" cy="44" r="12" fill="#f0c377" opacity=".8"/>
+            <rect x="30" y="30" width="60" height="8" rx="4" fill="#5f6e88"/>
+          </svg>
+          <figcaption>末班车窗 · 作者 江上一舟</figcaption>
+        </figure>
+        <figure class="w-md">
+          <svg viewBox="0 0 320 118" role="img" aria-label="影像墙作品：竹编篮与散落的竹条">
+            <rect width="320" height="118" fill="#e8efdf"/>
+            <rect y="86" width="320" height="32" fill="#c3d3b5"/>
+            <path d="M96 86 q0 -34 34 -34 q34 0 34 34 Z" fill="#c9a878"/>
+            <path d="M104 66 h52 M98 76 h64" stroke="#a98a58" stroke-width="2"/>
+            <rect x="176" y="76" width="86" height="4" rx="2" fill="#b99b6f" transform="rotate(-8 219 78)"/>
+            <rect x="186" y="88" width="72" height="4" rx="2" fill="#b99b6f" transform="rotate(6 222 90)"/>
+            <ellipse cx="60" cy="94" rx="22" ry="9" fill="#9fb98d"/>
+          </svg>
+          <figcaption>竹编练习 · 作者 阿竹</figcaption>
+        </figure>
+        <figure class="w-sm">
+          <svg viewBox="0 0 320 118" role="img" aria-label="影像墙作品：清晨的雾气山谷与细细的公路">
+            <rect width="320" height="118" fill="#e6ede9"/>
+            <path d="M0 74 L70 40 L140 78 L210 36 L280 80 L320 60 L320 118 L0 118 Z" fill="#a9c4b4"/>
+            <path d="M0 92 L80 66 L160 96 L240 62 L320 94 L320 118 L0 118 Z" fill="#6d9a80"/>
+            <path d="M0 104 L100 88 L200 108 L300 90 L320 100 L320 118 L0 118 Z" fill="#3f7458"/>
+            <path d="M40 112 q80 -34 160 -18 t120 -6" stroke="#f6f1e4" stroke-width="2.5" fill="none" opacity=".8"/>
+          </svg>
+          <figcaption>雾里的公路 · 作者 拾光小铺</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 创作灵感 + 企业动态 ============ -->
+  <section class="section" id="updates" aria-labelledby="updatesTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">07 / 创作灵感与企业动态</div>
+          <h2 id="updatesTitle">给创作者的工具，给关注者的进度</h2>
+          <p class="sec-desc">灵感区整理了近期常用的选题角度与剪辑思路；动态区同步官方发布节奏，方便合作方与作者了解平台进展。</p>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3 style="font-size:16px;color:#22302a;font-weight:800;margin-bottom:16px;">本期创作灵感</h3>
+          <div class="inspire-list">
+            <div class="inspire">
+              <div class="i-no">IDEA 01</div>
+              <h3>从一个动作开始</h3>
+              <p>不写大纲，先拍一个重复动作：剥豆子、擦桌子、系鞋带。让动作自己长出故事。</p>
+            </div>
+            <div class="inspire">
+              <div class="i-no">IDEA 02</div>
+              <h3>把旁白删掉试试</h3>
+              <p>去掉解释性旁白，只留同期声和环境音。很多片子删掉一半解说后会更有力量。</p>
+            </div>
+            <div class="inspire">
+              <div class="i-no">IDEA 03</div>
+              <h3>同一地点，四个时间</h3>
+              <p>固定机位，清晨、正午、黄昏、夜里各拍一分钟，直接并列剪辑，就是一支短片。</p>
+            </div>
+            <div class="inspire">
+              <div class="i-no">IDEA 04</div>
+              <h3>给标题留一个缺口</h3>
+              <p>标题不必说完整，留一个小悬念：一个没拍到的房间、一句没说完的话。</p>
+            </div>
+          </div>
+          <div style="margin-top:18px;font-size:13px;color:#5d6b60;line-height:1.8;">
+            更多脚本模板、分镜表格与封面构图参考，已在投稿指南附件中开放下载，社区作者可自由取用与二次修改。
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size:16px;color:#22302a;font-weight:800;margin-bottom:16px;">企业动态与官方发布</h3>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-date">本周</div>
+              <h3>第二季新增 6 集内容上线</h3>
+              <p>《葫芦里到底有什么》第二季完成本轮更新，配套幕后纪录与导演访谈同步发布，站内专题页已同步索引。</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">上周</div>
+              <h3>创作者扶持计划第三期公布名单</h3>
+              <p>本期共 32 位作者入选，覆盖纪录、动画、手艺与城市影像方向，将获得为期三个月的制作支持与展映资源。</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">本月</div>
+              <h3>投稿系统升级，支持高清成片直传</h3>
+              <p>新版本支持 1080P 成片与工程文件附件的分轨上传，审核周期从七个工作日缩短至三个工作日。</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">近期</div>
+              <h3>「国漫匠心」专题开启公开征集</h3>
+              <p>面向全体创作者征集国风题材短片，入选作品将进入专题首页并参与年度展映与社区投票。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 合作伙伴 ============ -->
+  <section class="section alt" aria-labelledby="partnerTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">08 / 合作伙伴</div>
+          <h2 id="partnerTitle">一起把内容做扎实的伙伴</h2>
+          <p class="sec-desc">平台与院校、文化机构、独立工作室保持长期合作，共同推进内容共创、展映与创作者培养。</p>
+        </div>
+      </div>
+      <div class="partner-row">
+        <div class="partner"><div class="p-mark av-1">文</div><b>山南文化馆</b><span>展映合作</span></div>
+        <div class="partner"><div class="p-mark av-2">映</div><b>映刻影展</b><span>年度联合企划</span></div>
+        <div class="partner"><div class="p-mark av-3">传</div><b>传媒学院影像系</b><span>创作者培养</span></div>
+        <div class="partner"><div class="p-mark av-4">木</div><b>木作工坊联盟</b><span>手艺内容共建</span></div>
+        <div class="partner"><div class="p-mark av-5">城</div><b>城市漫游计划</b><span>在地内容合作</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq" aria-labelledby="faqTitle">
+    <div class="wrap">
+      <div class="sec-head" style="justify-content:center;text-align:center;flex-direction:column;align-items:center;">
+        <div class="sec-no">09 / 常见问题</div>
+        <h2 id="faqTitle">关于平台与投稿，你可能想知道</h2>
+        <p class="sec-desc" style="margin-left:auto;margin-right:auto;">以下问题整理自社区反馈与投稿咨询，如仍未解决，可通过页面底部联系方式与我们沟通。</p>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>平台对投稿作品有什么基本要求？</summary>
+          <p>作品需为原创或已获得完整授权，时长建议 3 至 30 分钟，画质不低于 720P，音轨清晰。涉及他人肖像、音乐与素材的，请在投稿时注明授权来源。我们不接受搬运、拼接与二次上传的他人作品。</p>
+        </details>
+        <details>
+          <summary>投稿后多久能收到反馈？</summary>
+          <p>常规审核周期为三个工作日，专题征集期间可能延长至五个工作日。无论是否通过，编辑都会给出简短意见；如需补充材料，会通过站内消息通知。</p>
+        </details>
+        <details>
+          <summary>作品上线后，版权归谁？</summary>
+          <p>版权始终归创作者所有。平台仅获得在官方网站及关联渠道展示、推荐与展映的非独占授权，作者可随时申请下架或调整展示范围。</p>
+        </details>
+        <details>
+          <summary>是否支持团队或机构账号？</summary>
+          <p>支持。团队账号需提供主理人信息与团队成员说明，机构账号需补充主体资质。企业类合作请通过底部商务联系方式单独沟通。</p>
+        </details>
+        <details>
+          <summary>平台会提供制作支持吗？</summary>
+          <p>会。创作者扶持计划每期遴选一定数量的作者，提供制作资金、设备借用、剪辑反馈与展映资源。具体申请条件与时间以动态区公告为准。</p>
+        </details>
+        <details>
+          <summary>内容推荐是怎么决定的？</summary>
+          <p>由编辑策展与社区数据共同决定。编辑团队每周从投稿池中挑选作品进入焦点位，同时参考完播率、收藏与留言质量，不做单纯流量排序。</p>
+        </details>
+        <details>
+          <summary>如何举报不当内容或反馈问题？</summary>
+          <p>每支作品页均设有反馈入口，也可通过底部邮箱提交具体链接与说明。我们会在两个工作日内完成核查并回复处理结果。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 联系 / 投稿 ============ -->
+  <section class="section" id="contact" aria-labelledby="contactTitle">
+    <div class="wrap">
+      <div class="contact-band">
+        <div>
+          <h2 id="contactTitle">把你的故事，交给一个愿意慢下来的平台</h2>
+          <p>无论你手上是一段还没剪完的素材，还是一个只写在纸上的选题，都欢迎与我们聊聊。官方网站长期开放投稿与商务合作通道，我们更在意你想表达什么，而不是你有多少设备。</p>
+          <div class="contact-actions">
+            <button class="btn btn-primary" type="button" data-open="submitModal">立即投稿</button>
+            <button class="btn btn-ghost" type="button" data-open="feedbackModal">反馈与举报</button>
+            <button class="btn btn-ghost" type="button" data-share="葫芦娃官方网站">分享本站</button>
+          </div>
+        </div>
+        <div class="contact-info">
+          <div><b>投稿邮箱</b>create@huluwa-studio.cn</div>
+          <div><b>商务合作</b>partner@huluwa-studio.cn</div>
+          <div><b>媒体联络</b>press@huluwa-studio.cn</div>
+          <div><b>工作时间</b>周一至周五 10:00–19:00</div>
+          <div><b>办公地址</b>安徽省合肥市蜀山区创意产业园 A 座 5 层</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="logo">
+          <span class="logo-mark">葫</span>
+          <span>葫芦娃<small>HULUWA · OFFICIAL</small></span>
+        </a>
+        <p>葫芦娃官方网站，持续运营的国风原创影像内容平台。我们以匠心打磨每一支短片，以真实连接每一位创作者，构建值得信赖的内容生态。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容</h4>
+        <a href="#focus">焦点内容</a>
+        <a href="#stream">热门视频</a>
+        <a href="#topics">专题企划</a>
+        <a href="#wall">社区影像墙</a>
+      </div>
+      <div class="footer-col">
+        <h4>社区</h4>
+        <a href="#creators">创作者矩阵</a>
+        <a href="#stories">品牌故事</a>
+        <a href="#updates">企业动态</a>
+        <a href="#faq">常见问题</a>
+      </div>
+      <div class="footer-col">
+        <h4>关于</h4>
+        <a href="#contact">联系我们</a>
+        <a href="#contact" data-open="submitModal">投稿入口</a>
+        <a href="#contact" data-open="feedbackModal">反馈与举报</a>
+        <a href="#top">返回首页</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 葫芦娃官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容均为原创或已获授权 · 备案号占位：皖ICP备0000000号</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== 投稿弹窗 ===== -->
+<div class="modal-mask" id="submitModal" role="dialog" aria-modal="true" aria-labelledby="submitTitle">
+  <div class="modal modal-wrap">
+    <button class="modal-close" type="button" data-close="submitModal" aria-label="关闭投稿窗口">×</button>
+    <h3 id="submitTitle">投稿入口</h3>
+    <p class="m-desc">填写基本信息即可进入初审，编辑会在三个工作日内通过站内消息联系你。</p>
+    <form id="submitForm">
+      <label for="sName">作者 / 团队名称</label>
+      <input id="sName" type="text" placeholder="例如：青秧工作室" required>
+      <label for="sTitle">作品或选题名称</label>
+      <input id="sTitle" type="text" placeholder="一句话说清楚它讲什么" required>
+      <label for="sType">内容方向</label>
+      <select id="sType">
+        <option>纪录短片</option>
+        <option>创作幕后</option>
+        <option>人物访谈</option>
+        <option>手艺与日常</option>
+        <option>城市与在地文化</option>
+        <option>其他方向</option>
+      </select>
+      <label for="sDesc">补充说明</label>
+      <textarea id="sDesc" placeholder="为什么是你来拍这个选题？需要平台提供什么支持？"></textarea>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" type="button" data-close="submitModal">取消</button>
+        <button class="btn btn-primary" type="submit">提交初审</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ===== 反馈弹窗 ===== -->
+<div class="modal-mask" id="feedbackModal" role="dialog" aria-modal="true" aria-labelledby="fbTitle">
+  <div class="modal modal-wrap">
+    <button class="modal-close" type="button" data-close="feedbackModal" aria-label="关闭反馈窗口">×</button>
+    <h3 id="fbTitle">反馈与举报</h3>
+    <p class="m-desc">请尽量说明具体链接与问题类型，我们会在两个工作日内完成核查。</p>
+    <form id="fbForm">
+      <label for="fbType">问题类型</label>
+      <select id="fbType">
+        <option>内容问题</option>
+        <option>版权投诉</option>
+        <option>功能异常</option>
+        <option>合作咨询</option>
+      </select>
+      <label for="fbDesc">问题描述</label>
+      <textarea id="fbDesc" placeholder="请描述你遇到的问题或想反馈的内容" required></textarea>
+      <label for="fbMail">联系方式（选填）</label>
+      <input id="fbMail" type="email" placeholder="用于接收处理结果">
+      <div class="modal-actions">
+        <button class="btn btn-ghost" type="button" data-close="feedbackModal">取消</button>
+        <button class="btn btn-primary" type="submit">提交反馈</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ===== 作者简介弹窗 ===== -->
+<div class="modal-mask" id="creatorModal" role="dialog" aria-modal="true" aria-labelledby="cmTitle">
+  <div class="modal modal-wrap">
+    <button class="modal-close" type="button" data-close="creatorModal" aria-label="关闭作者简介">×</button>
+    <h3 id="cmTitle">创作者简介</h3>
+    <p class="m-desc" id="cmBody">加载中…</p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" type="button" data-close="creatorModal">关闭</button>
+      <button class="btn btn-primary" type="button" data-share="创作者主页">分享主页</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 分享弹窗 ===== -->
+<div class="modal-mask" id="shareModal" role="dialog" aria-modal="true" aria-labelledby="shTitle">
+  <div class="modal modal-wrap">
+    <button class="modal-close" type="button" data-close="shareModal" aria-label="关闭分享窗口">×</button>
+    <h3 id="shTitle">分享给同好</h3>
+    <p class="m-desc" id="shBody">选择分享渠道，或直接复制页面链接。</p>
+    <div class="modal-actions" style="justify-content:flex-start;flex-wrap:wrap;">
+      <button class="btn btn-ghost" type="button" data-channel="微信">微信</button>
+      <button class="btn btn-ghost" type="button" data-channel="微博">微博</button>
+      <button class="btn btn-ghost" type="button" data-channel="QQ">QQ</button>
+      <button class="btn btn-primary" type="button" id="copyLinkBtn">复制链接</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button class="back-top" id="backTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 移动端导航 ---------- */
+  var menuToggle = document.getElementById('menuToggle');
+  var mobilePanel = document.getElementById('mobilePanel');
+  menuToggle.addEventListener('click', function(){
+    var open = mobilePanel.classList.toggle('open');
+    menuToggle.classList.toggle('open', open);
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuToggle.setAttribute('aria-label', open ? '收起导航菜单' : '展开导航菜单');
+  });
+  mobilePanel.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mobilePanel.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded','false');
+    });
+  });
+
+  /* ---------- Toast ---------- */
+  var toast = document.getElementById('toast');
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2400);
+  }
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = document.getElementById('siteSearch');
+  var searchBtn = document.getElementById('searchBtn');
+  var searchFeedback = document.getElementById('searchFeedback');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#videoGrid .video-card'));
+
+  function doSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      searchFeedback.classList.remove('show');
+      showToast('请输入关键词后再搜索');
+      searchInput.focus();
+      return;
+    }
+    var hit = 0;
+    cards.forEach(function(card){
+      var txt = card.textContent;
+      var match = txt.indexOf(q) > -1;
+      card.style.display = match ? '' : 'none';
+      if(match) hit++;
+    });
+    searchFeedback.textContent = '“' + q + '” 命中 ' + hit + ' 条视频内容' + (hit === 0 ? '，可换个词试试，例如“幕后”“访谈”“日常”。' : '，已在下方向你展示。');
+    searchFeedback.classList.add('show');
+    document.getElementById('stream').scrollIntoView({behavior:'smooth'});
+    if(hit === 0){
+      cards.forEach(function(c){ c.style.display = ''; });
+    }
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+  searchInput.addEventListener('input', function(){
+    if(!searchInput.value.trim()){
+      searchFeedback.classList.remove('show');
+    }
+  });
+
+  /* ---------- 标签筛选 ---------- */
+  var chips = document.querySelectorAll('#streamFilter .chip');
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      var f = chip.getAttribute('data-filter');
+      var shown = 0;
+      cards.forEach(function(card){
+        var cat = card.getAttribute('data-cat');
+        var ok = (f === 'all') || (cat === f);
+        card.style.display = ok ? '' : 'none';
+        if(ok) shown++;
+      });
+      showToast(f === 'all' ? '已展示全部内容' : '已筛选：' + chip.textContent + '（' + shown + ' 条）');
+      searchFeedback.classList.remove('show');
+    });
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.querySelectorAll('.like-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var countEl = btn.querySelector('.like-count');
+      var raw = countEl.textContent;
+      var liked = btn.classList.toggle('liked');
+      btn.setAttribute('aria-pressed', liked ? 'true' : 'false');
+      btn.firstChild.textContent = liked ? '♥ ' : '♡ ';
+      if(/^\d+(\.\d+)?万$/.test(raw)){
+        var num = parseFloat(raw);
+        num = liked ? num + 0.1 : num - 0.1;
+        countEl.textContent = num.toFixed(1) + '万';
+      } else {
+        var n = parseInt(raw.replace(/,/g,''), 10) || 0;
+        n = liked ? n + 1 : n - 1;
+        countEl.textContent = n.toLocaleString('zh-CN');
+      }
+      showToast(liked ? '已点亮这支内容' : '已取消点亮');
+    });
+  });
+
+  document.querySelectorAll('.save-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.classList.toggle('saved');
+      btn.setAttribute('aria-pressed', saved ? 'true' : 'false');
+      btn.textContent = saved ? '★ 已收藏' : '☆ 收藏';
+      showToast(saved ? '已加入收藏夹' : '已移出收藏夹');
+    });
+  });
+
+  /* ---------- 通用弹窗 ---------- */
+  function openModal(id){
+    var m = document.getElementById(id);
+    if(!m) return;
+    m.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    var first = m.querySelector('input, textarea, select');
+    if(first) setTimeout(function(){ first.focus(); }, 60);
+  }
+  function closeModal(id){
+    var m = document.getElementById(id);
+    if(!m) return;
+    m.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('[data-open]').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      openModal(el.getAttribute('data-open'));
+    });
+  });
+  document.querySelectorAll('[data-close]').forEach(function(el){
+    el.addEventListener('click', function(){
+      closeModal(el.getAttribute('data-close'));
+    });
+  });
+  document.querySelectorAll('.modal-mask').forEach(function(mask){
+    mask.addEventListener('click', function(e){
+      if(e.target === mask) closeModal(mask.id);
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      document.querySelectorAll('.modal-mask.show').forEach(function(m){ closeModal(m.id); });
+    }
+  });
+
+  /* ---------- 作者简介弹窗 ---------- */
+  document.querySelectorAll('[data-creator]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.getElementById('cmBody').textContent = btn.getAttribute('data-creator');
+      openModal('creatorModal');
+    });
+  });
+
+  /* ---------- 分享 ---------- */
+  var currentShareTarget = '葫芦娃官方网站';
+  document.querySelectorAll('[data-share]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      currentShareTarget = btn.getAttribute('data-share') || '葫芦娃官方网站';
+      document.getElementById('shBody').textContent = '将「' + currentShareTarget + '」分享给同好，或直接复制页面链接。';
+      openModal('shareModal');
+    });
+  });
+  document.querySelectorAll('[data-channel]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var ch = btn.getAttribute('data-channel');
+      closeModal('shareModal');
+      showToast('已生成' + ch + '分享文案，可粘贴发送');
+    });
+  });
+
+  var copyBtn = document.getElementById('copyLinkBtn');
+  copyBtn.addEventListener('click', function(){
+    var text = currentShareTarget;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        showToast('已复制页面链接');
+        closeModal('shareModal');
+      }).catch(function(){
+        showToast('复制失败，请手动选择链接');
+      });
+    } else {
+      showToast('已复制页面链接');
+      closeModal('shareModal');
+    }
+  });
+
+  /* ---------- 表单提交 ---------- */
+  document.getElementById('submitForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('sName').value.trim();
+    var title = document.getElementById('sTitle').value.trim();
+    if(!name || !title){
+      showToast('请填写作者名称与作品名称');
+      return;
+    }
+    closeModal('submitModal');
+    showToast('投稿已提交，编辑将在三个工作日内联系你');
+    this.reset();
+  });
+  document.getElementById('fbForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var desc = document.getElementById('fbDesc').value.trim();
+    if(!desc){
+      showToast('请描述你遇到的问题');
+      return;
+    }
+    closeModal('feedbackModal');
+    showToast('反馈已收到，感谢你的提醒');
+    this.reset();
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 480){
+      backTop.classList.add('show');
+    } else {
+      backTop.classList.remove('show');
+    }
+  }, {passive:true});
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+})();
+</script>
+</body>
+              </html>
