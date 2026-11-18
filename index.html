@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>俄罗斯女子学院 - 女性成长影像社区 - 真实记录优雅绽放</title>
+<meta name="description" content="俄罗斯女子学院官方网站，专注女性成长与优雅生活的视频内容社区，记录艺术、修养、学业与日常的真实故事，汇聚优质原创创作者与企业品牌。">
+<style>
+:root{
+  --bg:#f5f2ef;
+  --ink:#1d1a1f;
+  --sub:#6b6470;
+  --wine:#8e2a45;
+  --wine-soft:#b95a72;
+  --gold:#b08d4f;
+  --cream:#fbf8f4;
+  --line:#e3dbd4;
+  --shadow:0 14px 34px rgba(40,25,35,.10);
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{
+  font-family:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.headline-font{font-family:Georgia,"Songti SC","SimSun",serif}
+
+/* ===== 吸顶区 ===== */
+.sticky-shell{position:sticky;top:0;z-index:80}
+.notice{
+  background:linear-gradient(90deg,#5c1a2c,#8e2a45 55%,#a8425c);
+  color:#f7e9dc;font-size:13.5px;
+  display:flex;align-items:center;gap:14px;
+  padding:9px 0;overflow:hidden;
+}
+.notice .wrap{display:flex;align-items:center;gap:12px;flex-wrap:nowrap}
+.notice-tag{
+  flex:none;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);
+  border-radius:999px;padding:1px 11px;font-size:12px;letter-spacing:.08em;
+}
+.notice-track{display:flex;gap:40px;animation:slide 26s linear infinite;white-space:nowrap}
+.notice-track span{opacity:.94}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.notice-track{animation:none}}
+
+header.site-head{
+  background:rgba(251,248,244,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  transition:box-shadow .3s;
+}
+header.site-head.scrolled{box-shadow:0 8px 24px rgba(60,35,45,.10)}
+.head-inner{display:flex;align-items:center;gap:26px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:11px;flex:none}
+.brand-mark{
+  width:42px;height:42px;border-radius:12px;
+  background:radial-gradient(circle at 30% 25%,#d78ba0,#8e2a45 70%);
+  display:grid;place-items:center;color:#fff;font-family:Georgia,serif;font-size:19px;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.35);
+}
+.brand-name{font-size:19px;font-weight:700;letter-spacing:.02em;line-height:1.25}
+.brand-sub{font-size:11px;letter-spacing:.28em;color:var(--wine);text-transform:uppercase}
+nav.main-nav{margin-left:auto}
+nav.main-nav ul{display:flex;gap:4px;list-style:none;align-items:center}
+nav.main-nav a{
+  display:block;padding:8px 13px;border-radius:10px;font-size:14.5px;color:#3c343f;
+  transition:background .2s,color .2s;
+}
+nav.main-nav a:hover{background:#f0e6dd;color:var(--wine)}
+.head-tools{display:flex;align-items:center;gap:10px}
+.search-box{position:relative;display:flex;align-items:center}
+.search-box input{
+  width:186px;padding:9px 34px 9px 14px;border-radius:999px;
+  border:1px solid var(--line);background:#fff;font-size:13.5px;outline:none;
+  transition:border-color .2s,box-shadow .2s,width .3s;
+}
+.search-box input:focus{border-color:var(--wine-soft);box-shadow:0 0 0 3px rgba(142,42,69,.12);width:216px}
+.search-box button{position:absolute;right:8px;color:var(--wine);font-size:15px}
+.search-hint{
+  position:absolute;top:46px;right:0;width:262px;background:#fff;border-radius:14px;
+  box-shadow:var(--shadow);border:1px solid var(--line);padding:10px;display:none;z-index:90;
+}
+.search-hint.show{display:block}
+.search-hint p{font-size:12px;color:var(--sub);margin-bottom:6px}
+.search-hint button{
+  display:block;width:100%;text-align:left;padding:7px 9px;border-radius:8px;font-size:13.5px;
+  color:#4a3f4c;
+}
+.search-hint button:hover{background:#f6ece7;color:var(--wine)}
+.nav-toggle{display:none;font-size:22px;padding:4px 8px;border-radius:8px;color:var(--wine)}
+.mobile-nav{display:none;border-top:1px solid var(--line);background:var(--cream)}
+.mobile-nav.open{display:block}
+.mobile-nav a{display:block;padding:12px 0;border-bottom:1px dashed var(--line);font-size:15px}
+
+/* ===== 首屏 ===== */
+.hero{position:relative;padding:56px 0 64px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(620px 380px at 88% -6%,rgba(185,90,114,.18),transparent 70%),
+    radial-gradient(520px 320px at 6% 100%,rgba(176,141,79,.16),transparent 70%);
+  pointer-events:none;
+}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.22em;
+  color:var(--wine);border:1px solid rgba(142,42,69,.3);border-radius:999px;
+  padding:4px 14px;background:rgba(255,255,255,.6);margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--wine)}
+h1{font-size:clamp(34px,4.6vw,56px);line-height:1.12;letter-spacing:.02em;font-weight:800}
+h1 em{font-style:normal;color:var(--wine);position:relative}
+h1 em::after{
+  content:"";position:absolute;left:0;right:0;bottom:6px;height:9px;
+  background:rgba(176,141,79,.28);border-radius:4px;z-index:-1;
+}
+.hero-lead{margin:20px 0 26px;font-size:16.5px;color:#443b47;max-width:560px}
+.hero-lead strong{color:var(--wine)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;
+  font-size:14.5px;font-weight:600;transition:transform .2s,box-shadow .2s,background .2s;
+}
+.btn-primary{background:var(--wine);color:#fff;box-shadow:0 10px 22px rgba(142,42,69,.28)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(142,42,69,.34)}
+.btn-ghost{border:1px solid rgba(142,42,69,.38);color:var(--wine);background:rgba(255,255,255,.6)}
+.btn-ghost:hover{background:#fff;transform:translateY(-2px)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:520px}
+.stat{border-left:2px solid rgba(142,42,69,.3);padding-left:14px}
+.stat b{display:block;font-size:26px;line-height:1.2;color:var(--wine);font-family:Georgia,serif}
+.stat span{font-size:12.5px;color:var(--sub);letter-spacing:.04em}
+.hero-visual{position:relative}
+.hero-frame{
+  border-radius:26px;overflow:hidden;box-shadow:0 30px 60px rgba(60,30,45,.22);
+  border:1px solid rgba(255,255,255,.7);transform:rotate(-1.2deg);
+}
+.hero-frame img{width:100%;height:auto}
+.hero-badge{
+  position:absolute;bottom:-18px;left:-18px;background:var(--cream);border:1px solid var(--line);
+  border-radius:16px;padding:12px 18px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center;
+}
+.hero-badge .dot{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#b95a72,#8e2a45);display:grid;place-items:center;color:#fff;font-size:15px}
+.hero-badge p{font-size:12px;color:var(--sub);line-height:1.4}
+.hero-badge b{display:block;font-size:14px;color:var(--ink)}
+
+/* ===== 通用 section ===== */
+section{padding:64px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:32px;flex-wrap:wrap}
+.sec-kicker{font-size:12px;letter-spacing:.26em;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
+h2{font-size:clamp(24px,2.8vw,34px);line-height:1.24;letter-spacing:.01em}
+.sec-desc{max-width:520px;font-size:14.5px;color:var(--sub)}
+.sec-link{font-size:14px;color:var(--wine);border-bottom:1px solid rgba(142,42,69,.35);padding-bottom:2px;white-space:nowrap}
+
+/* ===== 焦点内容 ===== */
+.focus{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.focus-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:24px}
+.v-card{
+  background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+  transition:transform .28s,box-shadow .28s;display:flex;flex-direction:column;
+}
+.v-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#e8dfd7}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.v-card:hover .thumb img{transform:scale(1.05)}
+.thumb .tag{
+  position:absolute;top:12px;left:12px;background:rgba(30,20,26,.72);color:#f7e9dc;
+  font-size:11.5px;padding:3px 10px;border-radius:999px;letter-spacing:.06em;backdrop-filter:blur(4px);
+}
+.thumb .play{
+  position:absolute;right:12px;bottom:12px;width:38px;height:38px;border-radius:50%;
+  background:rgba(251,248,244,.92);display:grid;place-items:center;color:var(--wine);
+  font-size:14px;box-shadow:0 6px 16px rgba(0,0,0,.2);
+}
+.thumb .grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(28,18,24,.55),transparent 55%)}
+.thumb .meta-line{position:absolute;left:12px;bottom:12px;color:#fff;font-size:12px;display:flex;gap:12px;opacity:.92}
+.v-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.v-body h3{font-size:16.5px;line-height:1.4}
+.v-body p{font-size:13.5px;color:var(--sub);flex:1}
+.v-foot{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--sub);flex-wrap:wrap}
+.avatar{
+  width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  font-size:12px;color:#fff;font-weight:700;flex:none;
+}
+.v-foot .acts{margin-left:auto;display:flex;gap:6px}
+.mini-btn{
+  border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:12px;
+  color:var(--sub);transition:all .2s;background:#fff;
+}
+.mini-btn:hover{border-color:var(--wine-soft);color:var(--wine)}
+.mini-btn.liked{background:var(--wine);border-color:var(--wine);color:#fff}
+.mini-btn.saved{background:#f3e7ea;border-color:var(--wine-soft);color:var(--wine)}
+.focus-side{display:grid;gap:18px;grid-template-rows:repeat(2,1fr)}
+.side-card{
+  display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;
+  overflow:hidden;transition:transform .25s,box-shadow .25s;
+}
+.side-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.side-card .pic{width:132px;flex:none;position:relative;overflow:hidden}
+.side-card .pic img{width:100%;height:100%;object-fit:cover}
+.side-card .txt{padding:14px 14px 14px 0;display:flex;flex-direction:column;gap:6px}
+.side-card h4{font-size:14.5px;line-height:1.4}
+.side-card span{font-size:12px;color:var(--sub)}
+
+/* ===== 热门视频流 ===== */
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.chip{
+  padding:6px 16px;border-radius:999px;border:1px solid var(--line);font-size:13px;
+  color:var(--sub);background:#fff;transition:all .2s;
+}
+.chip:hover{border-color:var(--wine-soft);color:var(--wine)}
+.chip.active{background:var(--wine);border-color:var(--wine);color:#fff}
+.v-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.v-grid .v-card[data-cat]{display:flex}
+.v-grid .v-card[data-cat].hide{display:none}
+
+/* ===== 专题 ===== */
+.topics{background:linear-gradient(180deg,#f7f1ea,#f5f2ef)}
+.topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.topic{position:relative;border-radius:var(--radius);overflow:hidden;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;box-shadow:0 10px 26px rgba(50,28,38,.14);transition:transform .28s}
+.topic:hover{transform:translateY(-5px)}
+.topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.topic .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(28,16,24,.88),rgba(28,16,24,.1) 65%);z-index:1}
+.topic .inner{position:relative;z-index:2;padding:18px}
+.topic .st{font-size:11.5px;letter-spacing:.14em;background:rgba(255,255,255,.2);border-radius:999px;padding:2px 9px;display:inline-block;margin-bottom:9px}
+.topic h3{font-size:16px;line-height:1.4;margin-bottom:6px}
+.topic p{font-size:12.5px;opacity:.86;line-height:1.55}
+
+/* ===== 创作者 ===== */
+.cr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cr-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+  display:flex;flex-direction:column;gap:12px;transition:transform .25s,box-shadow .25s;
+}
+.cr-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.cr-top{display:flex;align-items:center;gap:14px}
+.cr-avatar{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;color:#fff;font-size:20px;font-weight:700;flex:none}
+.cr-top h3{font-size:16px}
+.cr-top span{font-size:12.5px;color:var(--sub)}
+.cr-card p{font-size:13.5px;color:var(--sub);flex:1}
+.cr-data{display:flex;gap:18px;font-size:12.5px;color:var(--sub);border-top:1px dashed var(--line);padding-top:11px}
+.cr-data b{color:var(--ink);font-size:14px}
+.cr-more{align-self:flex-start;font-size:13px;color:var(--wine)}
+
+/* ===== 故事随笔 ===== */
+.story{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.story article{
+  background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:24px;
+  position:relative;overflow:hidden;
+}
+.story article::before{
+  content:"“";position:absolute;top:-16px;right:14px;font-size:96px;font-family:Georgia,serif;
+  color:rgba(176,141,79,.18);line-height:1;
+}
+.story h3{font-size:16.5px;margin-bottom:10px}
+.story p{font-size:13.5px;color:#544a56;margin-bottom:14px}
+.story .by{font-size:12.5px;color:var(--sub);display:flex;align-items:center;gap:8px}
+
+/* ===== 作品墙 ===== */
+.wall{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:14px}
+.wall figure{
+  position:relative;border-radius:14px;overflow:hidden;margin:0;cursor:pointer;
+  transition:transform .25s;
+}
+.wall figure:hover{transform:scale(1.02)}
+.wall figure img{width:100%;height:100%;object-fit:cover}
+.wall figure figcaption{
+  position:absolute;inset:auto 0 0 0;padding:22px 12px 10px;font-size:12.5px;color:#fff;
+  background:linear-gradient(to top,rgba(26,15,22,.8),transparent);
+}
+.wall .big{grid-column:span 2;grid-row:span 2}
+.wall .wide{grid-column:span 2}
+
+/* ===== 评价 ===== */
+.reviews{background:#2a1d26;color:#f2e8dc}
+.reviews .sec-kicker{color:var(--gold)}
+.reviews h2{color:#fff}
+.reviews .sec-desc{color:#c9b8c0}
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv{
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.13);border-radius:16px;padding:20px;
+  display:flex;flex-direction:column;gap:12px;
+}
+.rv p{font-size:13.5px;color:#e8dce1;flex:1}
+.rv .who{display:flex;align-items:center;gap:10px;font-size:12.5px;color:#c2b0b9}
+.rv .who b{color:#fff;font-size:13.5px}
+
+/* ===== 动态与FAQ ===== */
+.two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:start}
+.timeline{list-style:none;position:relative;padding-left:24px}
+.timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--wine-soft),transparent)}
+.timeline li{position:relative;padding-bottom:22px}
+.timeline li::before{
+  content:"";position:absolute;left:-24px;top:7px;width:10px;height:10px;border-radius:50%;
+  background:var(--cream);border:2px solid var(--wine);
+}
+.timeline time{font-size:12px;color:var(--gold);letter-spacing:.08em}
+.timeline h3{font-size:15.5px;margin:3px 0 4px}
+.timeline p{font-size:13.5px;color:var(--sub)}
+details.faq{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:12px;overflow:hidden;
+}
+details.faq summary{
+  list-style:none;cursor:pointer;padding:15px 44px 15px 18px;font-size:14.5px;font-weight:600;position:relative;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:20px;color:var(--wine);transition:transform .25s;
+}
+details.faq[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details.faq p{padding:0 18px 16px;font-size:13.5px;color:var(--sub)}
+
+/* ===== 合作 & 联系 ===== */
+.partners{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.partner{
+  background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 22px;
+  font-size:13.5px;color:#4b4050;letter-spacing:.05em;
+}
+.contact{
+  background:linear-gradient(120deg,#8e2a45,#5c1a2c);color:#f8ecdf;border-radius:26px;padding:46px;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;margin-top:8px;
+}
+.contact h2{color:#fff;margin-bottom:12px}
+.contact p{font-size:14px;color:#ecd7de;max-width:440px}
+.contact-actions{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.btn-light{background:#f8ecdf;color:#5c1a2c}
+.btn-line{border:1px solid rgba(248,236,223,.55);color:#f8ecdf}
+.contact-list{display:grid;gap:14px;font-size:13.5px}
+.contact-list div{display:flex;justify-content:space-between;border-bottom:1px dashed rgba(248,236,223,.3);padding-bottom:8px;color:#ecd7de}
+.contact-list b{color:#fff;font-weight:600}
+
+/* ===== 页脚 ===== */
+footer{background:#241a21;color:#c7b7bf;padding:52px 0 26px;font-size:13.5px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;margin-bottom:34px}
+footer h4{color:#fff;font-size:14px;margin-bottom:14px;letter-spacing:.06em}
+footer ul{list-style:none;display:grid;gap:9px}
+footer a:hover{color:#fff}
+.foot-brand p{max-width:320px;line-height:1.75;color:#a996a0}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#93808a}
+
+/* ===== 模态 & Toast ===== */
+.modal-mask{
+  position:fixed;inset:0;background:rgba(24,14,20,.55);backdrop-filter:blur(3px);
+  display:none;place-items:center;z-index:200;padding:20px;
+}
+.modal-mask.open{display:grid}
+.modal{
+  background:var(--cream);border-radius:20px;width:min(480px,100%);padding:28px;position:relative;
+  box-shadow:0 30px 70px rgba(0,0,0,.35);animation:pop .28s ease;
+}
+@keyframes pop{from{transform:translateY(14px) scale(.97);opacity:0}to{transform:none;opacity:1}}
+.modal h3{font-size:19px;margin-bottom:8px}
+.modal p{font-size:13.5px;color:var(--sub);margin-bottom:16px}
+.modal .field{margin-bottom:12px}
+.modal label{display:block;font-size:12.5px;color:var(--sub);margin-bottom:5px}
+.modal input,.modal textarea{
+  width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;font-size:13.5px;
+  background:#fff;outline:none;
+}
+.modal input:focus,.modal textarea:focus{border-color:var(--wine-soft);box-shadow:0 0 0 3px rgba(142,42,69,.1)}
+.modal textarea{resize:vertical;min-height:82px}
+.modal-close{position:absolute;top:12px;right:14px;font-size:20px;color:var(--sub)}
+.share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.share-row button{border:1px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;background:#fff}
+.share-row button:hover{border-color:var(--wine-soft);color:var(--wine)}
+#toast{
+  position:fixed;left:50%;bottom:38px;transform:translate(-50%,18px);
+  background:#33232d;color:#f8ecdf;padding:10px 22px;border-radius:999px;font-size:13.5px;
+  opacity:0;pointer-events:none;transition:all .3s;z-index:300;box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+#toTop{
+  position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:50%;
+  background:var(--wine);color:#fff;display:grid;place-items:center;font-size:17px;
+  box-shadow:0 12px 26px rgba(142,42,69,.35);opacity:0;pointer-events:none;transition:all .3s;z-index:120;
+}
+#toTop.show{opacity:1;pointer-events:auto}
+
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .focus-grid{grid-template-columns:1fr}
+  .topic-grid{grid-template-columns:repeat(2,1fr)}
+  .v-grid,.cr-grid,.story,.rv-grid{grid-template-columns:repeat(2,1fr)}
+  .two-col{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr;padding:34px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  nav.main-nav{display:none}
+  .nav-toggle{display:block;margin-left:auto}
+  .head-tools{order:3}
+  .search-box input{width:150px}
+  .search-box input:focus{width:170px}
+}
+@media (max-width:640px){
+  section{padding:46px 0}
+  .v-grid,.cr-grid,.story,.rv-grid,.topic-grid{grid-template-columns:1fr}
+  .wall{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}
+  .wall .big{grid-column:span 2;grid-row:span 1}
+  .wall .wide{grid-column:span 2}
+  .hero-stats{grid-template-columns:repeat(3,1fr);gap:10px}
+  .stat b{font-size:20px}
+  .hero-badge{left:8px;bottom:-14px;padding:9px 13px}
+  .foot-grid{grid-template-columns:1fr}
+  .contact{padding:26px}
+  .search-box{display:none}
+  .head-inner{gap:12px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-shell">
+  <div class="notice" role="region" aria-label="站内公告">
+    <div class="wrap">
+      <span class="notice-tag">公告</span>
+      <div class="notice-track" aria-hidden="true">
+        <span>「冬春修养季」专题课程影像已上线，共 12 期</span>
+        <span>第七届青年创作者征集开启报名，截止 3 月 31 日</span>
+        <span>官方发布：学院影像档案馆新增 186 条馆藏记录</span>
+        <span>创作者扶持计划第二期开放投稿，支持高清素材下载</span>
+        <span>「冬春修养季」专题课程影像已上线，共 12 期</span>
+        <span>第七届青年创作者征集开启报名，截止 3 月 31 日</span>
+        <span>官方发布：学院影像档案馆新增 186 条馆藏记录</span>
+        <span>创作者扶持计划第二期开放投稿，支持高清素材下载</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-head" id="siteHead">
+    <div class="wrap head-inner">
+      <a class="brand" href="#top" aria-label="俄罗斯女子学院官方网站首页">
+        <span class="brand-mark">R</span>
+        <span>
+          <span class="brand-name">俄罗斯女子学院</span>
+          <span class="brand-sub">RGW Video</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <ul>
+          <li><a href="#focus">焦点影像</a></li>
+          <li><a href="#stream">热门内容</a></li>
+          <li><a href="#topics">专题企划</a></li>
+          <li><a href="#creators">创作者</a></li>
+          <li><a href="#story">成长随笔</a></li>
+          <li><a href="#updates">企业动态</a></li>
+          <li><a href="#faq">帮助</a></li>
+          <li><a href="#contact">联系</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav">☰</button>
+      <div class="head-tools">
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="搜索课程、创作者、专题" aria-label="站内搜索">
+          <button type="button" id="searchBtn" aria-label="执行搜索">⌕</button>
+          <div class="search-hint" id="searchHint">
+            <p>热门搜索</p>
+            <button type="button" data-q="礼仪修养">礼仪修养</button>
+            <button type="button" data-q="艺术课程">艺术课程</button>
+            <button type="button" data-q="创作者扶持">创作者扶持</button>
+            <button type="button" data-q="校园日常">校园日常</button>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="#contact" style="padding:9px 18px;font-size:13.5px">投稿入口</a>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="移动端导航">
+      <div class="wrap">
+        <a href="#focus">焦点影像</a>
+        <a href="#stream">热门内容</a>
+        <a href="#topics">专题企划</a>
+        <a href="#creators">创作者</a>
+        <a href="#story">成长随笔</a>
+        <a href="#updates">企业动态</a>
+        <a href="#faq">帮助</a>
+        <a href="#contact">联系</a>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">官方网站 · 企业品牌门户</span>
+        <h1 id="hero-title" class="headline-font">俄罗斯女子学院</h1>
+        <p class="hero-lead">
+          作为深耕女性成长领域的<b>视频品牌官网</b>，俄罗斯女子学院以真实影像记录修养、艺术、学业与日常。
+          我们相信优雅来自持续的学习与坦诚的表达——<strong>平台汇聚 320 余位原创创作者</strong>，
+          以专业、高清的内容呈现女性在校园与生活中的多元面貌，让每一段成长都被认真对待。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#focus">浏览焦点影像 →</a>
+          <a class="btn btn-ghost" href="#creators">认识创作者</a>
+          <button class="btn btn-ghost" type="button" data-open="share">分享官网</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b data-count="320">0</b><span>原创创作者</span></div>
+          <div class="stat"><b data-count="1860">0</b><span>高清影像作品</span></div>
+          <div class="stat"><b data-count="96">0</b><span>口碑好评率 %</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-frame">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f3ddd8'/%3E%3Cstop offset='1' stop-color='%238e2a45'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23b08d4f'/%3E%3Cstop offset='1' stop-color='%23f7ece0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23g1)'/%3E%3Ccircle cx='620' cy='110' r='150' fill='%23f7ece0' opacity='.35'/%3E%3Ccircle cx='150' cy='360' r='110' fill='%23b08d4f' opacity='.28'/%3E%3Crect x='120' y='120' width='220' height='300' rx='110' fill='url(%23g2)' opacity='.9'/%3E%3Cpath d='M340 210 q90 -80 180 0 q90 80 180 0' stroke='%23fbf8f4' stroke-width='10' fill='none' opacity='.8'/%3E%3Crect x='300' y='60' width='120' height='14' rx='7' fill='%23fbf8f4' opacity='.75'/%3E%3Crect x='300' y='88' width='70' height='10' rx='5' fill='%23fbf8f4' opacity='.55'/%3E%3Ctext x='300' y='150' font-family='Georgia' font-size='40' fill='%23fbf8f4' opacity='.92'%3ERGW%3C/text%3E%3C/svg%3E" alt="俄罗斯女子学院品牌形象主视觉：酒红与金色交织的校园建筑意象" width="800" height="450">
+        </div>
+        <div class="hero-badge">
+          <span class="dot">✦</span>
+          <p><b>持续运营 · 官方发布</b>每周三更新精品内容</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点影像 -->
+  <section class="focus" id="focus" aria-labelledby="focus-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="sec-kicker">Focus</p>
+          <h2 id="focus-title">焦点影像</h2>
+        </div>
+        <p class="sec-desc">编辑部每周从上千条原创投稿中挑选值得反复观看的作品，涵盖修养课程、生活记录与人物访谈。</p>
+      </div>
+      <div class="focus-grid">
+        <article class="v-card">
+          <div class="thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23fff4ea'/%3E%3Cstop offset='1' stop-color='%23c98ba0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23a)'/%3E%3Crect x='0' y='300' width='800' height='150' fill='%238e2a45' opacity='.55'/%3E%3Ccircle cx='250' cy='190' r='86' fill='%23fbf8f4' opacity='.85'/%3E%3Cpath d='M175 300 q75 -90 150 0' stroke='%238e2a45' stroke-width='12' fill='none'/%3E%3Crect x='430' y='120' width='250' height='170' rx='12' fill='%23fbf8f4' opacity='.7'/%3E%3Crect x='452' y='148' width='160' height='12' rx='6' fill='%238e2a45' opacity='.6'/%3E%3Crect x='452' y='174' width='110' height='9' rx='4' fill='%238e2a45' opacity='.4'/%3E%3Crect x='452' y='196' width='190' height='9' rx='4' fill='%238e2a45' opacity='.3'/%3E%3C/svg%3E" alt="礼仪修养课程实录：教室窗边的示范讲解画面" width="800" height="450">
+            <span class="tag">精品内容</span>
+            <span class="grad"></span>
+            <span class="play">▶</span>
+            <span class="meta-line"><span>18:42</span><span>1.2 万次播放</span></span>
+          </div>
+          <div class="v-body">
+            <h3>一堂礼仪修养课：从站姿、目光到开口的第一句话</h3>
+            <p>学院礼仪教研组用四十分钟拆解日常社交中的细节，从递出名片的角度到餐桌上的交谈节奏，把抽象的“得体”变成可练习的步骤。</p>
+            <div class="v-foot">
+              <span class="avatar" style="background:#8e2a45">礼</span>
+              <span>礼仪教研组</span>
+              <span>· 3 天前</span>
+              <div class="acts">
+                <button class="mini-btn like" type="button">♡ 986</button>
+                <button class="mini-btn save" type="button">收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="focus-side">
+          <a class="side-card" href="#stream">
+            <div class="pic">
+              <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%232a3534'/%3E%3Ccircle cx='90' cy='110' r='58' fill='%237ba994' opacity='.9'/%3E%3Cpath d='M0 260 Q80 180 160 250 T300 240' stroke='%23d9e8df' stroke-width='9' fill='none' opacity='.7'/%3E%3Crect x='170' y='80' width='100' height='12' rx='6' fill='%23d9e8df' opacity='.6'/%3E%3C/svg%3E" alt="校园四季纪录：冬日庭院里的常青植物" width="300" height="300">
+            </div>
+            <div class="txt">
+              <span>日常记录</span>
+              <h4>冬日庭院：一天里光影走过的七个小时</h4>
+              <span style="margin-top:auto">学院影像社 · 8 分钟</span>
+            </div>
+          </a>
+          <a class="side-card" href="#creators">
+            <div class="pic">
+              <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23f0e2d0'/%3E%3Crect x='52' y='90' width='196' height='130' rx='10' fill='%23b95a72'/%3E%3Crect x='70' y='112' width='120' height='12' rx='6' fill='%23fbf8f4' opacity='.9'/%3E%3Crect x='70' y='140' width='160' height='9' rx='4' fill='%23fbf8f4' opacity='.7'/%3E%3Crect x='70' y='162' width='90' height='9' rx='4' fill='%23fbf8f4' opacity='.5'/%3E%3Ccircle cx='235' cy='240' r='42' fill='%238e2a45' opacity='.8'/%3E%3C/svg%3E" alt="人物访谈封面：创作者在书桌前的手写笔记" width="300" height="300">
+            </div>
+            <div class="txt">
+              <span>人物访谈</span>
+              <h4>她与镜头：一位女性摄影师的十二年</h4>
+              <span style="margin-top:auto">访谈栏目 · 22 分钟</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门内容 -->
+  <section id="stream" aria-labelledby="stream-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="sec-kicker">Community Feed</p>
+          <h2 id="stream-title">热门内容</h2>
+        </div>
+        <p class="sec-desc">来自社区与创作者的真实作品。按主题筛选，看看此刻大家正在讨论什么。</p>
+      </div>
+      <div class="chips" id="chips" role="tablist" aria-label="内容分类筛选">
+        <button class="chip active" type="button" data-cat="all">全部</button>
+        <button class="chip" type="button" data-cat="art">艺术修养</button>
+        <button class="chip" type="button" data-cat="life">日常记录</button>
+        <button class="chip" type="button" data-cat="craft">手作与创意</button>
+        <button class="chip" type="button" data-cat="talk">人物访谈</button>
+      </div>
+      <div class="v-grid" id="videoGrid">
+
+        <article class="v-card" data-cat="art">
+          <div class="thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='b1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e8cf9e'/%3E%3Cstop offset='1' stop-color='%236b7f5e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23b1)'/%3E%3Cpath d='M80 320 q120 -180 240 -40 q80 90 240 20' stroke='%23fbf8f4' stroke-width='10' fill='none' opacity='.8'/%3E%3Ccircle cx='470' cy='110' r='52' fill='%23fbf8f4' opacity='.55'/%3E%3Crect x='60' y='54' width='130' height='12' rx='6' fill='%233d3a34' opacity='.45'/%3E%3C/svg%3E" alt="古典音乐赏析：琴房里的大提琴与谱架" width="640" height="360">
+            <span class="tag">艺术修养</span><span class="grad"></span><span class="play">▶</span>
+            <span class="meta-line"><span>24:10</span><span>9,340 播放</span></span>
+          </div>
+          <div class="v-body">
+            <h3>听懂一首室内乐：从三个声部的对话开始</h3>
+            <p>音乐系讲师用一段四重奏拆解聆听方法，不需要乐理基础也能跟上。</p>
+            <div class="v-foot">
+              <span class="avatar" style="background:#6b7f5e">音</span><span>叶莲娜老师说</span>
+              <div class="acts"><button class="mini-btn like" type="button">♡ 621</button><button class="mini-btn save" type="button">收藏</button></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="v-card" data-cat="life">
+          <div class="thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23344a63'/%3E%3Ccircle cx='520' cy='90' r='60' fill='%23d8e4f2' opacity='.75'/%3E%3Cpath d='M0 300 L160 180 L320 300 L480 200 L640 300 V360 H0 Z' fill='%23e7eef6' opacity='.85'/%3E%3Cpath d='M0 330 L180 250 L360 330 L540 260 L640 320 V360 H0 Z' fill='%23b9cadd' opacity='.9'/%3E%3Crect x='70' y='60' width='110' height='11' rx='5' fill='%23fbf8f4' opacity='.6'/%3E%3C/svg%3E" alt="城市探索影像：河岸边的冬日散步路线" width="640" height="360">
+            <span class="tag">日常记录</span><span class="grad"></span><span class="play">▶</span>
+            <span class="meta-line"><span>12:36</span><span>8,120 播放</span></span>
+          </div>
+          <div class="v-body">
+            <h3>沿河走一下午：把课本里的历史走成街景</h3>
+            <p>从旧码头到学院后门，一条适合周末慢走的城市路线与它的故事。</p>
+            <div class="v-foot">
+              <span class="avatar" style="background:#344a63">城</span><span>步行地图</span>
+              <div class="acts"><button class="mini-btn like" type="button">♡ 512</button><button class="mini-btn save" type="button">收藏</button></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="v-card" data-cat="craft">
+          <div class="thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23f3e7d9'/%3E%3Crect x='90' y='90' width='200' height='200' rx='16' fill='%23c47b62' opacity='.9'/%3E%3Ccircle cx='420' cy='150' r='70' fill='%23b08d4f' opacity='.7'/%3E%3Cpath d='M330 330 L430 200 L530 330 Z' fill='%238e2a45' opacity='.7'/%3E%3Crect x='420' y='260' width='150' height='12' rx='6' fill='%23554a40' opacity='.5'/%3E%3C/svg%3E" alt="手作课堂：布料与针线在木桌上的配色练习" width="640" height="360">
+            <span class="tag">手作与创意</span><span class="grad"></span><span class="play">▶</span>
+            <span class="meta-line"><span>16:05</span><span>7,680 播放</span></span>
+          </div>
+          <div class="v-body">
+            <h3>一块旧布的新生：三种基础针法与配色</h3>
+            <p>手作组的入门课，材料来自旧衣回收，完成一件可日常使用的小物。</p>
+            <div class="v-foot">
+              <span class="avatar" style="background:#c47b62">手</span><span>缝纫角</span>
+              <div class="acts"><button class="mini-btn like" type="button">♡ 433</button><button class="mini-btn save" type="button">收藏</button></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="v-card" data-cat="talk">
+          <div class="thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23271f2a'/%3E%3Ccircle cx='180' cy='150' r='64' fill='%23d0a1ae' opacity='.9'/%3E%3Cpath d='M116 300 q64 -110 128 0' fill='%23d0a1ae' opacity='.75'/%3E%3Crect x='320' y='80' width='230' height='14' rx='7' fill='%23f0dfe4' opacity='.8'/%3E%3Crect x='320' y='112' width='160' height='10' rx='5' fill='%23f0dfe4' opacity='.55'/%3E%3Crect x='320' y='146' width='200' height='10' rx='5' fill='%23f0dfe4' opacity='.4'/%3E%3Ccircle cx='540' cy='270' r='46' fill='%23b08d4f' opacity='.7'/%3E%3C/svg%3E" alt="人物访谈现场：两位对谈者的半身剪影" width="640" height="360">
+            <span class="tag">人物访谈</span><span class="grad"></span><span class="play">▶</span>
+            <span class="meta-line"><span>31:20</span><span>6,940 播放</span></span>
+          </div>
+          <div class="v-body">
+            <h3>毕业后第五年：我们为什么还愿意回课堂</h3>
+            <p>三位不同届的校友聊继续教育、职业转弯与自我更新，坦诚而具体。</p>
+            <div class="v-foot">
+              <span class="avatar" style="background:#b08d4f">对</span><span>对谈栏目</span>
+              <div class="acts"><button class="mini-btn like" type="button">♡ 388</button><button class="mini-btn save" type="button">收藏</button></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="v-card" data-cat="art">
+          <div class="thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23f6efe6'/%3E%3Crect x='0' y='240' width='640' height='120' fill='%23d9c3a5'/%3E%3Ccircle cx='320' cy='160' r='86' fill='none' stroke='%238e2a45' stroke-width='12' opacity='.8'/%3E%3Ccircle cx='320' cy='160' r='46' fill='%23b08d4f' opacity='.6'/%3E%3Cpath d='M120 240 L120 120 M520 240 L520 120' stroke='%238e2a45' stroke-width='8' opacity='.5'/%3E%3C/svg%3E" alt="美术史公开课：几何构图与色彩秩序示意" width="640" height="360">
+            <span class="tag">艺术修养</span><span class="grad"></span><span class="play">▶</span>
+            <span class="meta-line"><span>20:14</span><span>6,210 播放</span></span>
+          </div>
+          <div class="v-body">
+            <h3>看懂构图：为什么有些画面让人一眼安静</h3>
+            <p>从三张经典作品出发，讲清对称、留白与视觉重心，适合摄影与绘画入门。</p>
+            <div class="v-foot">
+              <span class="avatar" style="background:#8e2a45">画</span><span>美术史公开课</span>
+              <div class="acts"><button class="mini-btn like" type="button">♡ 356</button><button class="mini-btn save" type="button">收藏</button></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="v-card" data-cat="life">
+          <div class="thumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23efe6d3'/%3E%3Crect x='60' y='200' width='520' height='16' rx='6' fill='%23a78a63'/%3E%3Crect x='110' y='110' width='90' height='90' rx='8' fill='%23c47b62'/%3E%3Crect x='230' y='90' width='90' height='110' rx='8' fill='%236b7f5e'/%3E%3Crect x='350' y='120' width='90' height='80' rx='8' fill='%23b08d4f'/%3E%3Crect x='470' y='100' width='70' height='100' rx='8' fill='%238e2a45' opacity='.8'/%3E%3C/svg%3E" alt="宿舍收纳改造：书架与分类盒的分层摆放" width="640" height="360">
+            <span class="tag">日常记录</span><span class="grad"></span><span class="play">▶</span>
+            <span class="meta-line"><span>09:48</span><span>5,880 播放</span></span>
+          </div>
+          <div class="v-body">
+            <h3>六平方米的秩序感：宿舍收纳的一次彻底改造</h3>
+            <p>不改动任何结构，用分层盒子与垂直空间重新安排物品动线。</p>
+            <div class="v-foot">
+              <span class="avatar" style="background:#6b7f5e">理</span><span>整理日常</span>
+              <div class="acts"><button class="mini-btn like" type="button">♡ 472</button><button class="mini-btn save" type="button">收藏</button></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <p style="text-align:center;margin-top:34px">
+        <button class="btn btn-ghost" type="button" id="loadMore">加载更多内容</button>
+      </p>
+    </div>
+  </section>
+
+  <!-- 专题 -->
+  <section class="topics" id="topics" aria-labelledby="topics-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="sec-kicker">Series</p>
+          <h2 id="topics-title">专题企划</h2>
+        </div>
+        <p class="sec-desc">以季度为单位推出的系列内容，围绕一个主题持续更新，形成可回溯的观看路径。</p>
+      </div>
+      <div class="topic-grid">
+        <a class="topic" href="#stream">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Cdefs%3E%3ClinearGradient id='t1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238e2a45'/%3E%3Cstop offset='1' stop-color='%23e5b4a6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='500' fill='url(%23t1)'/%3E%3Ccircle cx='120' cy='150' r='90' fill='%23fbf8f4' opacity='.25'/%3E%3Ccircle cx='310' cy='330' r='120' fill='%23fbf8f4' opacity='.18'/%3E%3Cpath d='M0 400 Q100 320 200 400 T400 380' stroke='%23fbf8f4' stroke-width='9' fill='none' opacity='.55'/%3E%3C/svg%3E" alt="冬春修养季专题封面：酒红渐变与弧形光带" width="400" height="500">
+          <span class="veil"></span>
+          <div class="inner">
+            <span class="st">更新中 · 12 期</span>
+            <h3>冬春修养季</h3>
+            <p>礼仪、声音、穿搭与阅读四个单元的系列课程影像。</p>
+          </div>
+        </a>
+        <a class="topic" href="#creators">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23394b46'/%3E%3Ccircle cx='200' cy='190' r='80' fill='%23b9d3c2' opacity='.7'/%3E%3Cpath d='M60 420 Q200 300 340 420 V500 H60 Z' fill='%237ba994' opacity='.7'/%3E%3Crect x='60' y='70' width='120' height='10' rx='5' fill='%23d9e8df' opacity='.7'/%3E%3C/svg%3E" alt="她的第一堂课专题封面：绿色坡地与白色圆光" width="400" height="500">
+          <span class="veil"></span>
+          <div class="inner">
+            <span class="st">已完结 · 8 期</span>
+            <h3>她的第一堂课</h3>
+            <p>记录新教师与新生初次相遇的真实片段，含课堂实录与幕后。</p>
+          </div>
+        </a>
+        <a class="topic" href="#story">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23efe2cf'/%3E%3Crect x='70' y='140' width='260' height='200' rx='14' fill='%23c47b62' opacity='.85'/%3E%3Cpath d='M70 240 H330' stroke='%23fbf8f4' stroke-width='8' opacity='.7'/%3E%3Ccircle cx='200' cy='100' r='44' fill='%238e2a45' opacity='.7'/%3E%3C/svg%3E" alt="手作与心意专题封面：暖色工作台与半成手作" width="400" height="500">
+          <span class="veil"></span>
+          <div class="inner">
+            <span class="st">更新中 · 6 期</span>
+            <h3>手作与心意</h3>
+            <p>从材料到成品，十位创作者的手作过程与作品背后的原因。</p>
+          </div>
+        </a>
+        <a class="topic" href="#stream">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%232b3a52'/%3E%3Ccircle cx='300' cy='130' r='70' fill='%23d8e4f2' opacity='.6'/%3E%3Cpath d='M0 430 L130 280 L260 430 L400 300 V500 H0 Z' fill='%236e84a3' opacity='.85'/%3E%3Crect x='60' y='80' width='140' height='11' rx='5' fill='%23fbf8f4' opacity='.55'/%3E%3C/svg%3E" alt="城市与校园专题封面：蓝灰夜色中的建筑轮廓" width="400" height="500">
+          <span class="veil"></span>
+          <div class="inner">
+            <span class="st">投票进行中</span>
+            <h3>城市与校园</h3>
+            <p>影像征集进行中，用镜头记录你所在城市的日常片段。</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者 -->
+  <section id="creators" aria-labelledby="creators-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="sec-kicker">Creators</p>
+          <h2 id="creators-title">创作者矩阵</h2>
+        </div>
+        <p class="sec-desc">他们是学院内容生态的中坚力量：教师、学生、校友与校外合作作者，共同呈现多元视角。</p>
+      </div>
+      <div class="cr-grid">
+        <article class="cr-card">
+          <div class="cr-top">
+            <span class="cr-avatar" style="background:linear-gradient(135deg,#b95a72,#8e2a45)">叶</span>
+            <div>
+              <h3>叶莲娜老师说</h3>
+              <span>艺术修养 · 音乐</span>
+            </div>
+          </div>
+          <p>学院音乐系讲师，做了十六年室内乐。她的视频不急着讲结论，更愿意带观众先听三分钟，再回答“为什么这一段动人”。</p>
+          <div class="cr-data"><span><b>128</b> 作品</span><span><b>4.2 万</b> 关注</span><span><b>口碑 98%</b></span></div>
+          <button class="cr-more" type="button" data-author="叶莲娜老师说">查看作者档案 →</button>
+        </article>
+        <article class="cr-card">
+          <div class="cr-top">
+            <span class="cr-avatar" style="background:linear-gradient(135deg,#7ba994,#4d6f60)">步</span>
+            <div>
+              <h3>步行地图</h3>
+              <span>城市探索 · 在地文化</span>
+            </div>
+          </div>
+          <p>由三名在校生组成的影像小组，专注把城市走成一条可以复述的路线。镜头克制，解说里有很多亲测的细节。</p>
+          <div class="cr-data"><span><b>76</b> 作品</span><span><b>3.1 万</b> 关注</span><span><b>更新稳定</b></span></div>
+          <button class="cr-more" type="button" data-author="步行地图">查看作者档案 →</button>
+        </article>
+        <article class="cr-card">
+          <div class="cr-top">
+            <span class="cr-avatar" style="background:linear-gradient(135deg,#c47b62,#96543f)">缝</span>
+            <div>
+              <h3>缝纫角</h3>
+              <span>手作 DIY · 生活器物</span>
+            </div>
+          </div>
+          <p>坚持“材料先用完再买新的”。每条视频都从一件闲置衣物开始，最后得到一样真的会被使用的物件。</p>
+          <div class="cr-data"><span><b>94</b> 作品</span><span><b>2.7 万</b> 关注</span><span><b>原创认证</b></span></div>
+          <button class="cr-more" type="button" data-author="缝纫角">查看作者档案 →</button>
+        </article>
+        <article class="cr-card">
+          <div class="cr-top">
+            <span class="cr-avatar" style="background:linear-gradient(135deg,#344a63,#20313f)">整</span>
+            <div>
+              <h3>整理日常</h3>
+              <span>家居收纳 · 生活方法</span>
+            </div>
+          </div>
+          <p>不推荐任何“必须买”的收纳神器，只讲动线与使用频率。她的改造视频常常只用三件工具，却能一次性解决问题。</p>
+          <div class="cr-data"><span><b>63</b> 作品</span><span><b>2.2 万</b> 关注</span><span><b>实用口碑</b></span></div>
+          <button class="cr-more" type="button" data-author="整理日常">查看作者档案 →</button>
+        </article>
+        <article class="cr-card">
+          <div class="cr-top">
+            <span class="cr-avatar" style="background:linear-gradient(135deg,#b08d4f,#8a6a32)">对</span>
+            <div>
+              <h3>对谈栏目</h3>
+              <span>人物访谈 · 行业观察</span>
+            </div>
+          </div>
+          <p>学院官方访谈团队，提问直接、剪辑克制。选题偏向长期主义：一个人如何把一件事做了很多年。</p>
+          <div class="cr-data"><span><b>52</b> 作品</span><span><b>5.6 万</b> 关注</span><span><b>官方出品</b></span></div>
+          <button class="cr-more" type="button" data-author="对谈栏目">查看作者档案 →</button>
+        </article>
+        <article class="cr-card">
+          <div class="cr-top">
+            <span class="cr-avatar" style="background:linear-gradient(135deg,#9c6b8e,#66445c)">画</span>
+            <div>
+              <h3>美术史公开课</h3>
+              <span>知识科普 · 视觉艺术</span>
+            </div>
+          </div>
+          <p>把课堂内容整理成适合反复观看的影像，每期配一份可下载的观看清单，帮助学习者建立自己的视觉坐标。</p>
+          <div class="cr-data"><span><b>88</b> 作品</span><span><b>3.8 万</b> 关注</span><span><b>课程配套</b></span></div>
+          <button class="cr-more" type="button" data-author="美术史公开课">查看作者档案 →</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 随笔 -->
+  <section id="story" aria-labelledby="story-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="sec-kicker">Notes</p>
+          <h2 id="story-title">成长随笔</h2>
+        </div>
+        <p class="sec-desc">影像之外的文字记录。由创作者自己写下，关于拍摄、学习和那些没能剪进片子里的时刻。</p>
+      </div>
+      <div class="story">
+        <article>
+          <h3>把镜头放低一点，就听见了另一个校园</h3>
+          <p>拍校园纪录片的第三周，我蹲在走廊尽头拍地面反光，忽然发现同学们的脚步有自己的节奏。有人很急，有人会为了看一眼窗外的雪停两秒。这些停顿后来成了片子的骨架。</p>
+          <div class="by"><span class="avatar" style="background:#344a63">步</span> 步行地图 · 2 月 18 日</div>
+        </article>
+        <article>
+          <h3>第一堂课的紧张，比内容本身更值得记录</h3>
+          <p>我们跟拍了一位新教师整整一个月。她准备了三版讲稿，最后用的是最简单那版。她说，真正站在讲台上时，你需要的不是完美，而是愿意被学生打断的勇气。</p>
+          <div class="by"><span class="avatar" style="background:#6b7f5e">叶</span> 叶莲娜老师说 · 2 月 11 日</div>
+        </article>
+        <article>
+          <h3>一件衬衫的第三次生命</h3>
+          <p>旧衣并不等于废料。这次我们拆掉了袖口已经磨薄的衬衫，保留了领口的走线，改成一个结实的书袋。它现在装着我每周要借的五本书，比新买的更顺手。</p>
+          <div class="by"><span class="avatar" style="background:#c47b62">缝</span> 缝纫角 · 2 月 5 日</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品墙 -->
+  <section id="wall" aria-labelledby="wall-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="sec-kicker">Gallery</p>
+          <h2 id="wall-title">用户作品墙</h2>
+        </div>
+        <p class="sec-desc">来自社区投稿的日常影像，尺寸不一，视角各异。点击任意作品可查看作者与说明。</p>
+      </div>
+      <div class="wall" id="wallGrid">
+        <figure class="big" data-cap="晨光里的阅览室｜投稿：林间坐标">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%23f5ead9'/%3E%3Crect x='0' y='360' width='800' height='140' fill='%23c9a882'/%3E%3Crect x='120' y='120' width='360' height='240' rx='10' fill='%238e2a45' opacity='.28'/%3E%3Ccircle cx='600' cy='170' r='90' fill='%23f7d9a0' opacity='.8'/%3E%3Cpath d='M0 360 H800' stroke='%238e6d45' stroke-width='6'/%3E%3C/svg%3E" alt="晨光里的阅览室：书架与窗边的高光">
+          <figcaption>晨光里的阅览室｜林间坐标</figcaption>
+        </figure>
+        <figure data-cap="雪后台阶｜投稿：北窗">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e8eef4'/%3E%3Cpath d='M0 240 H400 V300 H0 Z' fill='%23b9c9d8'/%3E%3Crect x='60' y='60' width='280' height='130' rx='8' fill='%238ea3b8' opacity='.5'/%3E%3Ccircle cx='320' cy='80' r='34' fill='%23fbf8f4'/%3E%3C/svg%3E" alt="雪后台阶：被新雪覆盖的楼前石阶">
+          <figcaption>雪后台阶｜北窗</figcaption>
+        </figure>
+        <figure data-cap="手写课程表｜投稿：一只钢笔">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23fbf5ec'/%3E%3Crect x='50' y='50' width='300' height='200' rx='6' fill='%23fff' stroke='%23d6c7b2' stroke-width='3'/%3E%3Cpath d='M80 100 H320 M80 140 H320 M80 180 H320 M150 60 V240' stroke='%23c47b62' stroke-width='4' opacity='.6'/%3E%3C/svg%3E" alt="手写课程表：方格纸上用彩笔标注的课表">
+          <figcaption>手写课程表｜一只钢笔</figcaption>
+        </figure>
+        <figure data-cap="琴房午后｜投稿：回声">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%232c2a33'/%3E%3Crect x='0' y='210' width='400' height='90' fill='%234a4450'/%3E%3Cpath d='M100 210 V120 q60 -50 120 0 V210' stroke='%23d9b06a' stroke-width='10' fill='none'/%3E%3Ccircle cx='320' cy='90' r='36' fill='%23d9b06a' opacity='.55'/%3E%3C/svg%3E" alt="琴房午后：逆光中的乐器轮廓与窗格">
+          <figcaption>琴房午后｜回声</figcaption>
+        </figure>
+        <figure class="wide" data-cap="校园市集的一角｜投稿：慢速快门">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 300'%3E%3Crect width='800' height='300' fill='%23f2e3cf'/%3E%3Crect x='60' y='120' width='200' height='140' rx='8' fill='%23b95a72'/%3E%3Crect x='300' y='90' width='180' height='170' rx='8' fill='%236b7f5e'/%3E%3Crect x='520' y='140' width='220' height='120' rx='8' fill='%23b08d4f'/%3E%3Cpath d='M0 260 H800' stroke='%23a98a63' stroke-width='8'/%3E%3C/svg%3E" alt="校园市集的一角：不同颜色摊位与遮棚">
+          <figcaption>校园市集的一角｜慢速快门</figcaption>
+        </figure>
+        <figure data-cap="窗台的植物｜投稿：小满">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23eef3ec'/%3E%3Crect x='120' y='190' width='160' height='70' rx='8' fill='%23c47b62'/%3E%3Cpath d='M200 190 q-70 -90 -20 -140 q60 40 20 140' fill='%236b7f5e'/%3E%3Cpath d='M200 190 q70 -70 30 -120 q-70 30 -30 120' fill='%2388a179'/%3E%3C/svg%3E" alt="窗台的植物：陶盆与向上生长的叶">
+          <figcaption>窗台的植物｜小满</figcaption>
+        </figure>
+        <figure data-cap="排练厅的地板｜投稿：第十二排">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23d8c3a8'/%3E%3Cpath d='M0 0 L400 0 L400 60 L0 160 Z' fill='%23c0a481' opacity='.8'/%3E%3Cpath d='M0 300 L400 300 L400 240 L0 170 Z' fill='%23b08d63' opacity='.8'/%3E%3Ccircle cx='230' cy='150' r='40' fill='%238e2a45' opacity='.35'/%3E%3C/svg%3E" alt="排练厅的地板：木纹与斜射进来的光带">
+          <figcaption>排练厅的地板｜第十二排</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 评价 -->
+  <section class="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="sec-kicker">Voices</p>
+          <h2 id="reviews-title">用户评价</h2>
+        </div>
+        <p class="sec-desc">来自长期使用者的真实反馈。我们保留不同意见，也认真回应每一条建议。</p>
+      </div>
+      <div class="rv-grid">
+        <div class="rv">
+          <p>看礼仪课那期时正在准备面试，跟着练了三次站姿和开场白，第二天真的没那么慌了。这种具体到动作的内容，比空泛的鼓励有用。</p>
+          <div class="who"><span class="avatar" style="background:#b95a72">周</span><div><b>周予安</b><br>在校生</div></div>
+        </div>
+        <div class="rv">
+          <p>作为毕业多年的校友，我最喜欢对谈栏目。它不制造焦虑，也不假装轻松，只是把选择讲清楚。看完会想认真过好这一周。</p>
+          <div class="who"><span class="avatar" style="background:#b08d4f">林</span><div><b>林一岚</b><br>校友 · 设计师</div></div>
+        </div>
+        <div class="rv">
+          <p>手作系列的材料说明写得很细，连针号都标了。跟着做了一次旧衣改造，成品真的能用。希望以后多出一些这样的入门内容。</p>
+          <div class="who"><span class="avatar" style="background:#c47b62">邵</span><div><b>邵清和</b><br>手作爱好者</div></div>
+        </div>
+        <div class="rv">
+          <p>画质比很多同类平台稳定，文档和课程清单也整理得清楚。唯一的建议是希望能按学习顺序给内容排序，新用户会更好上手。</p>
+          <div class="who"><span class="avatar" style="background:#6b7f5e">陈</span><div><b>陈斯宇</b><br>自学者</div></div>
+        </div>
+        <div class="rv">
+          <p>投稿流程比想象中顺，上传后三天收到编辑的具体修改意见，不是模板回复。这种认真对待创作者的态度，值得长期留下来。</p>
+          <div class="who"><span class="avatar" style="background:#344a63">阿</span><div><b>阿季</b><br>社区创作者</div></div>
+        </div>
+        <div class="rv">
+          <p>带女儿一起看成长类的内容，节奏不快，讲解也照顾到非专业观众。我们会在周末挑一期一起看完再聊几句，成了固定的小习惯。</p>
+          <div class="who"><span class="avatar" style="background:#9c6b8e">何</span><div><b>何女士</b><br>家长用户</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 动态 + FAQ -->
+  <section id="updates" aria-labelledby="updates-title">
+    <div class="wrap two-col">
+      <div>
+        <div class="sec-head" style="margin-bottom:24px">
+          <div>
+            <p class="sec-kicker">Newsroom</p>
+            <h2 id="updates-title">企业动态</h2>
+          </div>
+        </div>
+        <ul class="timeline">
+          <li>
+            <time>2025 年 2 月 · 官方发布</time>
+            <h3>影像档案馆新增 186 条馆藏记录</h3>
+            <p>学院影像档案馆完成第二轮整理，收录近十年的课程实录、校园纪录与访谈资料，支持站内检索与高清下载申请。</p>
+          </li>
+          <li>
+            <time>2025 年 2 月 · 比赛报名</time>
+            <h3>青年创作者影像征集开启</h3>
+            <p>面向在校生与毕业三年内的创作者，主题为“我所在的地方”。设纪录、实验与日常三个单元，报名截止 3 月 31 日。</p>
+          </li>
+          <li>
+            <time>2025 年 1 月 · 合作公告</time>
+            <h3>与三所艺术院校达成内容共建</h3>
+            <p>双方将围绕公开课影像、师资访谈与联合专题展开合作，首批共建内容预计于春季学期上线。</p>
+          </li>
+          <li>
+            <time>2025 年 1 月 · 平台更新</time>
+            <h3>创作者后台增加素材库与数据面板</h3>
+            <p>新版后台支持高清素材分类管理、观看完成度分析与评论集中回复，帮助创作者把精力更多放在内容本身。</p>
+          </li>
+        </ul>
+      </div>
+      <div id="faq">
+        <div class="sec-head" style="margin-bottom:24px">
+          <div>
+            <p class="sec-kicker">Help</p>
+            <h2>常见问题</h2>
+          </div>
+        </div>
+        <details class="faq" open>
+          <summary>如何向平台投稿？</summary>
+          <p>点击页面任意“投稿入口”按钮填写基本信息，我们会提供上传通道与素材规范。初审通常在三个工作日内完成，通过后会收到编辑的具体沟通。</p>
+        </details>
+        <details class="faq">
+          <summary>内容是否都经过授权？</summary>
+          <p>站内影像均为原创或已获授权的正版内容。转载与二次使用需获得作者与平台双方许可，商业用途请通过联系页面提交申请。</p>
+        </details>
+        <details class="faq">
+          <summary>可以下载课程配套清单吗？</summary>
+          <p>部分系列内容提供配套清单与延伸阅读，登录后可在作品详情区下载。清单仅限个人学习使用，请勿二次分发。</p>
+        </details>
+        <details class="faq">
+          <summary>创作者扶持计划如何申请？</summary>
+          <p>持续更新三个月以上、作品质量稳定的创作者可在后台提交申请。扶持内容包括拍摄设备借用、剪辑协作与专题推荐位。</p>
+        </details>
+        <details class="faq">
+          <summary>搜索找不到想看的内容怎么办？</summary>
+          <p>可以尝试更短的关键词，或通过专题页按主题浏览。也可以在联系页面留下需求，编辑部会整理反馈并补充相关内容。</p>
+        </details>
+        <details class="faq">
+          <summary>企业或机构如何合作？</summary>
+          <p>我们开放联合专题、课程共建与影像委托等合作形式。请在联系页面说明机构背景与合作方向，商务团队会在一周内回复。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作与联系 -->
+  <section id="contact" aria-labelledby="contact-title" style="padding-top:24px">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="sec-kicker">Partners</p>
+          <h2>合作品牌</h2>
+        </div>
+        <p class="sec-desc">与教育、艺术与文化机构长期共建内容，让专业经验以更易理解的方式被看见。</p>
+      </div>
+      <div class="partners">
+        <span class="partner">北方艺术基金会</span>
+        <span class="partner">城市公共图书馆</span>
+        <span class="partner">青年影像联盟</span>
+        <span class="partner">手作工坊联合体</span>
+        <span class="partner">女性职业教育中心</span>
+        <span class="partner">校园文化促进会</span>
+      </div>
+
+      <div class="contact">
+        <div>
+          <h2 id="contact-title">与我们保持联系</h2>
+          <p>无论是投稿、合作还是内容建议，我们都愿意认真听。俄罗斯女子学院官方网站持续运营，编辑部每周整理一次来信。</p>
+          <div class="contact-actions">
+            <button class="btn btn-light" type="button" data-open="submit">投稿入口</button>
+            <button class="btn btn-line" type="button" data-open="share">分享本页</button>
+            <button class="btn btn-line" type="button" data-open="feedback">意见反馈</button>
+          </div>
+        </div>
+        <div class="contact-list">
+          <div><span>内容合作</span><b>content@rgw-video.example</b></div>
+          <div><span>商务咨询</span><b>partner@rgw-video.example</b></div>
+          <div><span>投稿事务</span><b>submit@rgw-video.example</b></div>
+          <div><span>工作时间</span><b>周一至周五 10:00–18:00</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h4>俄罗斯女子学院</h4>
+        <p>专注女性成长与优雅生活的视频品牌官网，以原创、高清的内容记录课堂、技艺与日常。我们相信持续的陪伴与真实的表达，是内容生态最可靠的基础。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#focus">焦点影像</a></li>
+          <li><a href="#stream">热门内容</a></li>
+          <li><a href="#topics">专题企划</a></li>
+          <li><a href="#wall">作品墙</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#creators">创作者矩阵</a></li>
+          <li><a href="#updates">企业动态</a></li>
+          <li><a href="#faq">帮助中心</a></li>
+          <li><a href="#contact">联系我们</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="#contact">投稿入口</a></li>
+          <li><a href="#contact">合作申请</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#contact">意见反馈</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>俄罗斯女子学院官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容均为原创或已授权 · 备案号占位 · 更新于 2025 年 2 月</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到顶部">↑</button>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<div class="modal-mask" id="modalMask">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="关闭">×</button>
+    <h3 id="modalTitle">提示</h3>
+    <p id="modalDesc"></p>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 吸顶阴影 */
+  var head = document.getElementById('siteHead');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 12){ head.classList.add('scrolled'); }
+    else{ head.classList.remove('scrolled'); }
+    var t = document.getElementById('toTop');
+    if(window.scrollY > 480){ t.classList.add('show'); }
+    else{ t.classList.remove('show'); }
+  }, {passive:true});
+
+  /* 移动端导航 */
+  var navToggle = document.getElementById('navToggle');
+  var mobileNav = document.getElementById('mobileNav');
+  navToggle.addEventListener('click', function(){
+    var open = mobileNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mobileNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded','false');
+    });
+  });
+
+  /* Toast */
+  var toastEl = document.getElementById('toast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2200);
+  }
+
+  /* 搜索 */
+  var input = document.getElementById('searchInput');
+  var hint = document.getElementById('searchHint');
+  var searchBtn = document.getElementById('searchBtn');
+  function doSearch(q){
+    q = (q || '').trim();
+    if(!q){ toast('请输入关键词，例如：礼仪修养'); return; }
+    toast('已为你筛选「' + q + '」相关内容');
+    hint.classList.remove('show');
+    var grid = document.getElementById('videoGrid');
+    var cards = grid.querySelectorAll('.v-card');
+    var hit = 0;
+    cards.forEach(function(c){
+      var text = c.textContent;
+      var match = text.indexOf(q) > -1;
+      if(match){ c.classList.remove('hide'); hit++; }
+      else{ c.classList.add('hide'); }
+    });
+    document.getElementById('stream').scrollIntoView({behavior:'smooth'});
+    if(hit === 0){ toast('暂时没有完全匹配的结果，已保留推荐内容'); cards.forEach(function(c){ c.classList.remove('hide'); }); }
+  }
+  searchBtn.addEventListener('click', function(){ doSearch(input.value); });
+  input.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ doSearch(input.value); } });
+  input.addEventListener('focus', function(){ hint.classList.add('show'); });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.search-box')){ hint.classList.remove('show'); }
+  });
+  hint.querySelectorAll('button').forEach(function(b){
+    b.addEventListener('click', function(){
+      input.value = b.getAttribute('data-q');
+      doSearch(input.value);
+    });
+  });
+
+  /* 分类筛选 */
+  var chips = document.querySelectorAll('#chips .chip');
+  var allCards = document.querySelectorAll('#videoGrid .v-card');
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      var cat = chip.getAttribute('data-cat');
+      allCards.forEach(function(card){
+        if(cat === 'all' || card.getAttribute('data-cat') === cat){ card.classList.remove('hide'); }
+        else{ card.classList.add('hide'); }
+      });
+    });
+  });
+
+  document.getElementById('loadMore').addEventListener('click', function(){
+    toast('已是最新内容，更多作品将在本周三更新');
+  });
+
+  /* 点赞 / 收藏 */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('.mini-btn.like');
+    if(likeBtn){
+      e.preventDefault();
+      var txt = likeBtn.textContent;
+      var n = parseInt(txt.replace(/[^\d]/g,''), 10) || 0;
+      if(likeBtn.classList.contains('liked')){
+        likeBtn.classList.remove('liked');
+        likeBtn.textContent = '♡ ' + (n-1);
+        toast('已取消点赞');
+      }else{
+        likeBtn.classList.add('liked');
+        likeBtn.textContent = '♥ ' + (n+1);
+        toast('感谢你的喜欢');
+      }
+      return;
+    }
+    var saveBtn = e.target.closest('.mini-btn.save');
+    if(saveBtn){
+      e.preventDefault();
+      if(saveBtn.classList.contains('saved')){
+        saveBtn.classList.remove('saved');
+        saveBtn.textContent = '收藏';
+        toast('已取消收藏');
+      }else{
+        saveBtn.classList.add('saved');
+        saveBtn.textContent = '已收藏';
+        toast('已加入收藏夹');
+      }
+      return;
+    }
+  });
+
+  /* 数字滚动 */
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var start = performance.now();
+    var dur = 1200;
+    function step(now){
+      var p = Math.min((now - start) / dur, 1);
+      var val = Math.round(target * (1 - Math.pow(1-p, 3)));
+      el.textContent = val;
+      if(p < 1){ requestAnimationFrame(step); }
+      else{ el.textContent = target; }
+    }
+    requestAnimationFrame(step);
+  }
+  var counted = false;
+  var statsObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting && !counted){
+        counted = true;
+        document.querySelectorAll('[data-count]').forEach(animateCount);
+      }
+    });
+  }, {threshold:.4});
+  var statsEl = document.querySelector('.hero-stats');
+  if(statsEl && 'IntersectionObserver' in window){ statsObs.observe(statsEl); }
+  else{ document.querySelectorAll('[data-count]').forEach(function(el){ el.textContent = el.getAttribute('data-count'); }); }
+
+  /* 弹窗系统 */
+  var mask = document.getElementById('modalMask');
+  var mTitle = document.getElementById('modalTitle');
+  var mDesc = document.getElementById('modalDesc');
+  var mBody = document.getElementById('modalBody');
+
+  function openModal(title, desc, bodyHTML){
+    mTitle.textContent = title;
+    mDesc.textContent = desc || '';
+    mBody.innerHTML = bodyHTML || '';
+    mask.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    mask.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  mask.addEventListener('click', function(e){ if(e.target === mask){ closeModal(); } });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && mask.classList.contains('open')){ closeModal(); } });
+
+  var shareHTML =
+    '<div class="share-row">' +
+    '<button type="button" data-copy>复制链接</button>' +
+    '<button type="button" data-share="微信">微信</button>' +
+    '<button type="button" data-share="微博">微博</button>' +
+    '<button type="button" data-share="QQ">QQ</button>' +
+    '</div>';
+
+  var submitHTML =
+    '<div class="field"><label>作品标题</label><input type="text" placeholder="例如：冬日下午的阅览室" id="fTitle"></div>' +
+    '<div class="field"><label>联系方式</label><input type="text" placeholder="邮箱或常用号码" id="fContact"></div>' +
+    '<div class="field"><label>作品简介</label><textarea placeholder="简单介绍拍摄内容、时长与素材情况" id="fDesc"></textarea></div>' +
+    '<button class="btn btn-primary" type="button" id="submitOk" style="margin-top:6px">提交投稿</button>';
+
+  var feedbackHTML =
+    '<div class="field"><label>反馈类型</label><input type="text" placeholder="内容问题 / 功能建议 / 版权事务" id="fbType"></div>' +
+    '<div class="field"><label>具体说明</label><textarea placeholder="请描述你遇到的问题或建议" id="fbDesc"></textarea></div>' +
+    '<button class="btn btn-primary" type="button" id="fbOk" style="margin-top:6px">提交反馈</button>';
+
+  document.addEventListener('click', function(e){
+    var op = e.target.closest('[data-open]');
+    if(op){
+      var type = op.getAttribute('data-open');
+      if(type === 'share'){
+        openModal('分享本页', '把俄罗斯女子学院官网分享给同样在认真生活的人。', shareHTML);
+      }else if(type === 'submit'){
+        openModal('投稿入口', '填写基本信息后，编辑部会在三个工作日内与你联系。', submitHTML);
+      }else if(type === 'feedback'){
+        openModal('意见反馈', '每一条建议我们都会阅读，并在每周整理后统一回复。', feedbackHTML);
+      }
+      return;
+    }
+
+    var authorBtn = e.target.closest('[data-author]');
+    if(authorBtn){
+      var name = authorBtn.getAttribute('data-author');
+      openModal(name, '创作者档案', '<p style="font-size:13.5px;color:#6b6470;line-height:1.75">' +
+        '这位创作者已通过平台原创认证，长期稳定更新，内容以真实经验与可复用的方法为主。' +
+        '你可以在热门内容区找到该作者的作品，也可以使用搜索框按昵称检索。</p>' +
+        '<button class="btn btn-ghost" type="button" id="authorFollow">关注创作者</button>');
+      return;
+    }
+
+    if(e.target.closest('[data-copy]')){
+      var url = location.href;
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(url).then(function(){ toast('链接已复制'); }, function(){ toast('复制失败，请手动复制地址栏链接'); });
+      }else{
+        toast('请使用浏览器地址栏复制本页链接');
+      }
+      return;
+    }
+
+    var sh = e.target.closest('[data-share]');
+    if(sh){
+      toast('已生成「' + sh.getAttribute('data-share') + '」分享提示');
+      return;
+    }
+
+    if(e.target.id === 'submitOk'){
+      var t = document.getElementById('fTitle').value.trim();
+      var c = document.getElementById('fContact').value.trim();
+      if(!t || !c){ toast('请填写作品标题与联系方式'); return; }
+      closeModal();
+      toast('投稿已提交，编辑部将在三个工作日内联系你');
+      return;
+    }
+    if(e.target.id === 'fbOk'){
+      var d = document.getElementById('fbDesc').value.trim();
+      if(!d){ toast('请填写具体说明'); return; }
+      closeModal();
+      toast('反馈已收到，感谢你的建议');
+      return;
+    }
+    if(e.target.id === 'authorFollow'){
+      closeModal();
+      toast('已关注该创作者');
+      return;
+    }
+  });
+
+  /* 作品墙点击 */
+  document.querySelectorAll('#wallGrid figure').forEach(function(fig){
+    fig.addEventListener('click', function(){
+      openModal('作品详情', fig.getAttribute('data-cap'), '<p style="font-size:13.5px;color:#6b6470">该作品来自社区投稿，已获得作者展示授权。喜欢这组影像，可以在热门内容区找到同作者的系列作品。</p>');
+    });
+  });
+
+  /* 回到顶部 */
+  document.getElementById('toTop').addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+})();
+</script>
+</body>
+              </html>
